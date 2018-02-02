@@ -1,4 +1,4 @@
-﻿Version 2.2
+﻿Version 2.1.1
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des normes Web de l'Université Laval.
 
