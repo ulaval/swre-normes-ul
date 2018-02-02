@@ -1,17 +1,11 @@
 @mixin menu-principal($couleurBande, $couleurTexteBande, $couleurBackgroundHover, $couleurLienHover, $couleurSeparateursV, $couleurHoverNiveau2) {
 	div {
 		ul li {
-			&:hover > a,
-			&[class*="current"] > a {
+			&:hover,
+			&[class*="current"] {
 				background: $couleurBackgroundHover;
 			   	color: $couleurLienHover;
 			}
-	        a {
-			    &:hover {
-			    	background: $couleurBackgroundHover;
-			        color: $couleurLienHover;
-			    }
-		    }
 		}
 		& > ul {
 			background: $couleurBande;
@@ -49,10 +43,14 @@
 		box-sizing: border-box;
 		margin: 0 auto;
 		max-width: $largeur-maximum-site;
-		& > ul > li {
-			float: left;
-			& > a {
-				text-align: center;
+		& > ul {
+			& > li {
+				align-items: center; //Nécessaire à IE11
+				display: flex;
+				& > a {
+					margin: auto;
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -97,7 +95,6 @@
         li {
 	        line-height: 21px;
 	        position: relative;
-	        text-align: left;
 			&:hover ul {
 			    display: block;	/* Display the dropdown */
 			}
@@ -113,7 +110,8 @@
 		    	margin-top: -2px;
 		        min-width: 205px; /* Set width of the dropdown */
 		        padding: 30px 15px;
-		        position: absolute;
+				position: absolute;
+				top: 100%;
 		        z-index: 999;
 		        li {
 			        display: block;
