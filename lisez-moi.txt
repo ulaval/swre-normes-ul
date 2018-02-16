@@ -1,4 +1,4 @@
-﻿Version 2.1, révision SVN suivant la 112
+﻿Version 2.1.1
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des normes Web de l'Université Laval.
 
@@ -8,4 +8,4 @@ http://ressourcesweb.bsw.ulaval.ca/normes-institutionnelles/generateur-de-code/
 Il n’est pas recommandé de modifier les fichiers sources. Si des ajustements sont nécessaires, ces derniers devraient être faits dans du code surchargeant celui des normes afin de faciliter la maintenance.
 
 Changement :
- - Mettre le pied de page à la même largeur que l'entête.
+ - Bug fix: dans le menu principal, quand il y avait des liens sur une ligne et d'autres sur une seule, ces derniers étaient alignés en haut au lieu d'être centrés.
