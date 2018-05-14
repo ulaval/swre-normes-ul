@@ -9,3 +9,4 @@ Il n’est pas recommandé de modifier les fichiers sources. Si des ajustements 
 
 Changement :
  - Ajout de spécificité pour la taille du texte du pied de page.
+ - Suppression de la version non minifiée du CSS. Elle n'était pas utile et contenait des erreurs d'encodage.
