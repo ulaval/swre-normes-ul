@@ -555,7 +555,7 @@ body {
   border-radius: 0;
 }
 
-/* Permet de définir la hauteur de l'espace où la faculté/département est défini. Avec cette variable, on peut centrer les titres selon leurs formats. Par défaut, on met 80px pour centrer un nom de faculté affiché sur une ligne; 90px si on affiche aussi le nom du département. La bande de couleur n'est pas inclue dans la hauteur. */
+/* Permet de d├®finir la hauteur de l'espace o├╣ la facult├®/d├®partement est d├®fini. Avec cette variable, on peut centrer les titres selon leurs formats. Par d├®faut, on met 80px pour centrer un nom de facult├® affich├® sur une ligne; 90px si on affiche aussi le nom du d├®partement. La bande de couleur n'est pas inclue dans la hauteur. */
 body {
   max-width: 100%;
   min-width: 320px;
@@ -857,6 +857,9 @@ body {
   font-weight: 400;
   text-decoration: none;
 }
+.normes-ul-pied-page p {
+  font: 300 14px 'Source Sans Pro', sans-serif;
+}
 .normes-ul-pied-page .pied-page-contenu {
   box-sizing: border-box;
   margin: 0 auto;
@@ -1066,8 +1069,8 @@ body {
   box-sizing: border-box;
   padding: 0 15px;
   width: 100%;
-  /* Crée les thèmes de menu */
-  /* Paramètres menu-principal: $couleurBande, $couleurTexteBande, $couleurBackgroundHover, $couleurLienHover, $couleurSeparateursV, $couleurHoverNiveau2 */
+  /* Cr├®e les th├¿mes de menu */
+  /* Param├¿tres menu-principal: $couleurBande, $couleurTexteBande, $couleurBackgroundHover, $couleurLienHover, $couleurSeparateursV, $couleurHoverNiveau2 */
   /* On cache tous les ul de 3e niv et + */
 }
 .normes-ul-navigation-principale *,
@@ -1081,16 +1084,14 @@ body {
   max-width: 1170px;
 }
 .normes-ul-navigation-principale div > ul > li {
-  float: left;
+  align-items: center;
+  display: flex;
 }
 .normes-ul-navigation-principale div > ul > li > a {
+  margin: auto;
   text-align: center;
 }
-.normes-ul-navigation-principale.noir-sousmenu-gris div ul li:hover > a, .normes-ul-navigation-principale.noir-sousmenu-gris div ul li[class*="current"] > a {
-  background: #5c5c5c;
-  color: #fff;
-}
-.normes-ul-navigation-principale.noir-sousmenu-gris div ul li a:hover {
+.normes-ul-navigation-principale.noir-sousmenu-gris div ul li:hover, .normes-ul-navigation-principale.noir-sousmenu-gris div ul li[class*="current"] {
   background: #5c5c5c;
   color: #fff;
 }
@@ -1116,11 +1117,7 @@ body {
 .normes-ul-navigation-principale.noir-sousmenu-gris.pleine-largeur {
   background: #2e2e2e;
 }
-.normes-ul-navigation-principale.blanc-sousmenu-gris div ul li:hover > a, .normes-ul-navigation-principale.blanc-sousmenu-gris div ul li[class*="current"] > a {
-  background: #cac9c9;
-  color: #000;
-}
-.normes-ul-navigation-principale.blanc-sousmenu-gris div ul li a:hover {
+.normes-ul-navigation-principale.blanc-sousmenu-gris div ul li:hover, .normes-ul-navigation-principale.blanc-sousmenu-gris div ul li[class*="current"] {
   background: #cac9c9;
   color: #000;
 }
@@ -1146,11 +1143,7 @@ body {
 .normes-ul-navigation-principale.blanc-sousmenu-gris.pleine-largeur {
   background: #fff;
 }
-.normes-ul-navigation-principale.gris-sousmenu-gris div ul li:hover > a, .normes-ul-navigation-principale.gris-sousmenu-gris div ul li[class*="current"] > a {
-  background: #cac9c9;
-  color: #000;
-}
-.normes-ul-navigation-principale.gris-sousmenu-gris div ul li a:hover {
+.normes-ul-navigation-principale.gris-sousmenu-gris div ul li:hover, .normes-ul-navigation-principale.gris-sousmenu-gris div ul li[class*="current"] {
   background: #cac9c9;
   color: #000;
 }
@@ -1176,11 +1169,7 @@ body {
 .normes-ul-navigation-principale.gris-sousmenu-gris.pleine-largeur {
   background: #f2f2f2;
 }
-.normes-ul-navigation-principale.gris-sousmenu-blanc div ul li:hover > a, .normes-ul-navigation-principale.gris-sousmenu-blanc div ul li[class*="current"] > a {
-  background: #fff;
-  color: #000;
-}
-.normes-ul-navigation-principale.gris-sousmenu-blanc div ul li a:hover {
+.normes-ul-navigation-principale.gris-sousmenu-blanc div ul li:hover, .normes-ul-navigation-principale.gris-sousmenu-blanc div ul li[class*="current"] {
   background: #fff;
   color: #000;
 }
@@ -1222,7 +1211,6 @@ body {
 .normes-ul-navigation-principale ul li {
   line-height: 21px;
   position: relative;
-  text-align: left;
 }
 .normes-ul-navigation-principale ul li:hover ul {
   display: block;
@@ -1242,6 +1230,7 @@ body {
   /* Set width of the dropdown */
   padding: 30px 15px;
   position: absolute;
+  top: 100%;
   z-index: 999;
 }
 .normes-ul-navigation-principale ul li ul li {
