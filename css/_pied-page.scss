@@ -2,7 +2,7 @@
 	background: $couleurBackground;
 	color: $couleurTexte;
 	.titre-section strong,
-	.copyright a,	
+	.copyright a,
 	.copyright p,
 	.communication strong {
 		color: $couleurTitre;
@@ -46,7 +46,7 @@
 		font: 300 14px 'Source Sans Pro', sans-serif;
 	}
 	.pied-page-contenu {
-		box-sizing: border-box; 
+		box-sizing: border-box;
 		margin: 0 auto;
 		max-width: $largeur-maximum-site + 30; //Le + 30 vient du fait que les goutières sont gérées différemment que dans l'entête.
 		padding: 50px 15px;
@@ -84,7 +84,7 @@
 			margin-bottom: 18px;
 		}
 	}
-	.titre-section { 
+	.titre-section {
 		margin-bottom: 15px;
 		strong {
 			font: normal 18px 'Source Sans Pro', sans-serif;
@@ -104,7 +104,7 @@
 	.coordonnees {
 		box-sizing: border-box;
 		float: left;
-		width: 50%; 
+		width: 50%;
 	}
 	.liens {
 		box-sizing: border-box;
@@ -174,12 +174,12 @@
 		p {
 			font-size: 12px;
 			margin: 0 auto;
-			max-width: $largeur-maximum-site;
+			max-width: $largeur-maximum-site + 30;
 			padding: 8px 15px;
 		}
 		span {
 			font-weight: 300; //nécessaire pour les sites utilisant normalize.css
-			&::after { 
+			&::after {
 				content: " | ";
 			}
 		}
@@ -206,7 +206,7 @@
 			a {
 				display: block;
 			}
-			span::after { 
+			span::after {
 				content: "";
 			}
 		}
@@ -220,7 +220,7 @@
 		.bloc-carte,
 		.bloc-adresse,
 		.communication,
-		.coordonnees, 
+		.coordonnees,
 		.liens {
 			border: none !important;
 			clear: both;
