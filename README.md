@@ -15,3 +15,5 @@ Changements :
 2.  Ajout de spécificité pour la taille du texte du pied de page
 3.  Suppression de la version non minifiée du CSS. Elle n'était pas utile et contenait des erreurs d'encodage.
 4.  Ajout de cartes et de photos de pavillons
+5.  Régler un bogue avec les boutons sur 2 lignes
+6.  Ajout de spécificité dans le JQuery de la recherche
