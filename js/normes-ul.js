@@ -37,12 +37,12 @@ jQuery(document).ready(function(jQuery){
 
 	jQuery('.nav-mobile-trigger').on('click', function(){
 		toggleNav();
-		if (jQuery('.recherche').hasClass('ouvert')) {
+		if (jQuery('.normes-ul-entete-ul .recherche').hasClass('ouvert')) {
 			toggleRecherche();
 		}
 		return false;
 	});
-	
+
 	jQuery('.nav-mobile .has-children').children('a').on('click', function(){
 		var selected = jQuery(this);
 		selected.next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('move-out');
@@ -56,7 +56,7 @@ jQuery(document).ready(function(jQuery){
 		return false;
 	});
 
-	jQuery('.recherche').click(function() {
+	jQuery('.normes-ul-entete-ul .recherche').click(function() {
 		if (jQuery('.nav-mobile').hasClass('dropdown-is-active')) {
 			toggleNav();
 		}
@@ -79,12 +79,12 @@ jQuery(document).ready(function(jQuery){
 	}
 
 	function toggleRecherche(){
-		jQuery('.recherche').toggleClass('ouvert');
+		jQuery('.normes-ul-entete-ul .recherche').toggleClass('ouvert');
 		jQuery('.normes-ul-entete-ul .icon-recherche').toggle();
 		jQuery('.normes-ul-entete-ul .icon-close').toggle();
 		// Animation jQuery au lieu de CSS parce qu'animer la hauteur, c'est compliqué (cascade) et faire un déplacement aussi, à cause des z-index.
 		// On part l'animation à une hauteur de 14px, ce qui correspond à "l'overlap" entre l'entête et le menu. C'est cet "overlap" qui empêche d'utiliser slideToggle parce que ça créé un "flash" blanc.
-		if (jQuery('.recherche').hasClass('ouvert')) {
+		if (jQuery('.normes-ul-entete-ul .recherche').hasClass('ouvert')) {
 			jQuery('#section-recherche').height(14);
 			jQuery('#section-recherche').show();
 			jQuery('#section-recherche').animate({height: 92}, 100);
