@@ -1,4 +1,4 @@
-sass --watch css/assemblage.scss:css/composantes-ul-min.css --style compressed
+sass --watch css/assemblage.scss:css/normes-ul.css --style compressed
 
 exit /b 0
 
