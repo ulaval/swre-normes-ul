@@ -165,23 +165,31 @@
 	.copyright {
 		clear: both;
 		font-weight: 300;
-		a {
+		& > div {
+			font-size: 12px;
+			margin: 0 auto;
+			max-width: $largeur-maximum-site + 30;
+      padding: 8px 15px;
+      div {
+        display: inline;
+        &:nth-child(2) span:last-of-type::after {
+          content: "";
+          padding: 0;
+        }
+      }
+    }
+    a {
 			font-weight: 300;
 			&:hover {
 				text-decoration: underline;
 			}
 		}
-		p {
-			font-size: 12px;
-			margin: 0 auto;
-			max-width: $largeur-maximum-site + 30;
-			padding: 8px 15px;
-		}
 		span {
 			font-weight: 300; //nécessaire pour les sites utilisant normalize.css
 			&::after {
-				content: " | ";
-			}
+        content: "|";
+        padding: 0 10px;
+      }
 		}
 	}
 }
@@ -203,12 +211,13 @@
 			width: 50%;
 		}
 		.copyright {
-			a {
-				display: block;
-			}
-			span::after {
-				content: "";
-			}
+      & > div div {
+          display: block;
+      }
+      div div span:last-of-type::after {
+        content: "";
+        padding: 0;
+      }
 		}
 	}
 }
