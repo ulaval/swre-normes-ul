@@ -68,32 +68,32 @@ jQuery(document).ready(function(jQuery){
 	var hauteurNavMobile = jQuery(document).height() - jQuery('.normes-ul-entete-ul').height();
 	jQuery('.nav-mobile, .nav-mobile-content').css('height', hauteurNavMobile);
 
-	function toggleNav(){
-		jQuery('.nav-mobile').toggleClass('dropdown-is-active');
-		jQuery('.nav-mobile-trigger').toggleClass('dropdown-is-active');
-		if (jQuery('.nav-mobile').hasClass('dropdown-is-active')) { // Si l'utilisateur a navigué passé le 1er niveau puis ferme le menu, s'il l'ouvre à nouveau, il revient au 1er au 1er niveau
-				jQuery('.has-children ul').addClass('is-hidden');
-				jQuery('.move-out').removeClass('move-out');
-				jQuery('.is-active').removeClass('is-active');
-		}
-	}
-
-	function toggleRecherche(){
-		jQuery('.normes-ul-entete-ul .recherche').toggleClass('ouvert');
-		jQuery('.normes-ul-entete-ul .icon-recherche').toggle();
-		jQuery('.normes-ul-entete-ul .icon-close').toggle();
-		// Animation jQuery au lieu de CSS parce qu'animer la hauteur, c'est compliqué (cascade) et faire un déplacement aussi, à cause des z-index.
-		// On part l'animation à une hauteur de 14px, ce qui correspond à "l'overlap" entre l'entête et le menu. C'est cet "overlap" qui empêche d'utiliser slideToggle parce que ça créé un "flash" blanc.
-		if (jQuery('.normes-ul-entete-ul .recherche').hasClass('ouvert')) {
-			jQuery('#section-recherche').height(14);
-			jQuery('#section-recherche').show();
-			jQuery('#section-recherche').animate({height: 92}, 100);
-			jQuery('#section-recherche input').focus();
-		} else {
-			jQuery('#section-recherche').animate({height: 14}, 100, 'swing', function() {
-				jQuery('#section-recherche').hide()
-       		});
-		}
-	}
-
 });
+
+function toggleNav(){
+  jQuery('.nav-mobile').toggleClass('dropdown-is-active');
+  jQuery('.nav-mobile-trigger').toggleClass('dropdown-is-active');
+  if (jQuery('.nav-mobile').hasClass('dropdown-is-active')) { // Si l'utilisateur a navigué passé le 1er niveau puis ferme le menu, s'il l'ouvre à nouveau, il revient au 1er au 1er niveau
+      jQuery('.has-children ul').addClass('is-hidden');
+      jQuery('.move-out').removeClass('move-out');
+      jQuery('.is-active').removeClass('is-active');
+  }
+}
+
+function toggleRecherche(){
+  jQuery('.normes-ul-entete-ul .recherche').toggleClass('ouvert');
+  jQuery('.normes-ul-entete-ul .icon-recherche').toggle();
+  jQuery('.normes-ul-entete-ul .icon-close').toggle();
+  // Animation jQuery au lieu de CSS parce qu'animer la hauteur, c'est compliqué (cascade) et faire un déplacement aussi, à cause des z-index.
+  // On part l'animation à une hauteur de 14px, ce qui correspond à "l'overlap" entre l'entête et le menu. C'est cet "overlap" qui empêche d'utiliser slideToggle parce que ça créé un "flash" blanc.
+  if (jQuery('.normes-ul-entete-ul .recherche').hasClass('ouvert')) {
+    jQuery('#section-recherche').height(14);
+    jQuery('#section-recherche').show();
+    jQuery('#section-recherche').animate({height: 92}, 100);
+    jQuery('#section-recherche input').focus();
+  } else {
+    jQuery('#section-recherche').animate({height: 14}, 100, 'swing', function() {
+      jQuery('#section-recherche').hide()
+         });
+  }
+}
