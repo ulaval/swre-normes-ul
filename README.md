@@ -1,6 +1,4 @@
-﻿Version 2.2
-
-IMPORTANT: cette version n'est pas rétrocompatible. Voir les changements plus bas.
+﻿Version 2.3
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des normes Web de l'Université Laval.
 
@@ -11,9 +9,7 @@ Il n’est pas recommandé de modifier les fichiers sources. Si des ajustements 
 
 Changements :
 
-1.  L'introduction des composantes Web Ulaval a amené à renommer la feuille de style et le fichier Javascript. La strate Admission est maintenant dans un nouveau paquet. Voir le Guide des ressources Web pour plus de détails.
-2.  Ajout de spécificité pour la taille du texte du pied de page
-3.  Suppression de la version non minifiée du CSS. Elle n'était pas utile et contenait des erreurs d'encodage.
-4.  Ajout de cartes et de photos de pavillons
-5.  Régler un bogue avec les boutons sur 2 lignes
-6.  Ajout de spécificité dans le JQuery de la recherche
+1. Ajout du lien "Fraudes en ligne" dans le pied de page
+2. Régler un bogue dans Edge
+3. Sortir les fonctions JS du "document ready" pour pouvoir les appeler ailleurs
+4. Ajouter de la photo du Vachon
