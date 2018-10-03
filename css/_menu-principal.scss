@@ -48,6 +48,7 @@
 				align-items: center; //Nécessaire à IE11
 				display: flex;
 				& > a {
+          line-height: 1;
 					margin: auto;
 					text-align: center;
 				}
@@ -58,19 +59,19 @@
 	/* Paramètres menu-principal: $couleurBande, $couleurTexteBande, $couleurBackgroundHover, $couleurLienHover, $couleurSeparateursV, $couleurHoverNiveau2 */
 	&.noir-sousmenu-gris {
 		@include menu-principal(#2e2e2e, #fff, #5c5c5c, #fff, #6a6a6a, #494949);
-		&.pleine-largeur { 
+		&.pleine-largeur {
 			background: #2e2e2e;
 		}
 	}
 	&.blanc-sousmenu-gris {
 		@include menu-principal(#fff, #2e2e2e, #cac9c9, #000, #d5d5d5, #dbdbdb);
-		&.pleine-largeur { 
+		&.pleine-largeur {
 			background: #fff;
 		}
 	}
 	&.gris-sousmenu-gris {
 		@include menu-principal(#f2f2f2, #2e2e2e, #cac9c9, #000, #d5d5d5, #dbdbdb);
-		&.pleine-largeur { 
+		&.pleine-largeur {
 			background: #f2f2f2;
 		}
 	}
@@ -120,7 +121,7 @@
 			        }
 			    }
 		    }
-	    }     
+	    }
     }
     /* On cache tous les ul de 3e niv et + */
     ul > li > ul ul {
