@@ -1,4 +1,4 @@
-﻿Version 2.3
+﻿Version 2.3.1
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des normes Web de l'Université Laval.
 
@@ -7,9 +7,6 @@ http://ressourcesweb.bsw.ulaval.ca/normes-institutionnelles/generateur-de-code/
 
 Il n’est pas recommandé de modifier les fichiers sources. Si des ajustements sont nécessaires, ces derniers devraient être faits dans du code surchargeant celui des normes afin de faciliter la maintenance.
 
-Changements :
+Changement :
 
-1. Ajout du lien "Fraudes en ligne" dans le pied de page
-2. Régler un bogue dans Edge
-3. Sortir les fonctions JS du "document ready" pour pouvoir les appeler ailleurs
-4. Ajouter de la photo du Vachon
+1. Ajout de la photo du Palasis-Prince
