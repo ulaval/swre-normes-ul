@@ -81,19 +81,24 @@ function toggleNav(){
 }
 
 function toggleRecherche(){
-  jQuery('.normes-ul-entete-ul .recherche').toggleClass('ouvert');
-  jQuery('.normes-ul-entete-ul .icon-recherche').toggle();
-  jQuery('.normes-ul-entete-ul .icon-close').toggle();
-  // Animation jQuery au lieu de CSS parce qu'animer la hauteur, c'est compliqué (cascade) et faire un déplacement aussi, à cause des z-index.
-  // On part l'animation à une hauteur de 14px, ce qui correspond à "l'overlap" entre l'entête et le menu. C'est cet "overlap" qui empêche d'utiliser slideToggle parce que ça créé un "flash" blanc.
-  if (jQuery('.normes-ul-entete-ul .recherche').hasClass('ouvert')) {
-    jQuery('#section-recherche').height(14);
-    jQuery('#section-recherche').show();
-    jQuery('#section-recherche').animate({height: 92}, 100);
-    jQuery('#section-recherche input').focus();
-  } else {
-    jQuery('#section-recherche').animate({height: 14}, 100, 'swing', function() {
-      jQuery('#section-recherche').hide()
-         });
+	jQuery('.normes-ul-entete-ul .recherche').toggleClass('ouvert');
+	jQuery('.normes-ul-entete-ul .icon-recherche').toggle();
+	jQuery('.normes-ul-entete-ul .icon-close').toggle();
+  
+	var tmpHeight = jQuery( '#section-recherche' ).css( "height" ).replace('px', '');
+  
+	// Animation jQuery au lieu de CSS parce qu'animer la hauteur, c'est compliqué (cascade) et faire un déplacement aussi, à cause des z-index.
+	// On part l'animation à une hauteur de 14px, ce qui correspond à "l'overlap" entre l'entête et le menu. C'est cet "overlap" qui empêche d'utiliser slideToggle parce que ça créé un "flash" blanc.
+	if (jQuery('.normes-ul-entete-ul .recherche').hasClass('ouvert')) {
+	  jQuery('#section-recherche').height(14);
+	  jQuery('#section-recherche').show();
+	  jQuery('#section-recherche').animate({height: tmpHeight}, 100);
+	  jQuery('#section-recherche input').focus();
+	} else {
+	  jQuery('#section-recherche').animate({height: 14}, 100, 'swing', function() {
+		jQuery('#section-recherche').hide()
+		jQuery('#section-recherche').height(tmpHeight);
+	  });
+	}
   }
-}
+  
