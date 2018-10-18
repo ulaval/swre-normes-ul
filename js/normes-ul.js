@@ -96,9 +96,8 @@ function toggleRecherche(){
     jQuery('#section-recherche input').focus();
   } else {
     jQuery('#section-recherche').animate({height: 14}, 100, 'swing', function() {
-    jQuery('#section-recherche').hide()
-    jQuery('#section-recherche').height(hauteurStrate);
-      });
-    }
+      jQuery('#section-recherche').hide()
+      jQuery('#section-recherche').height(hauteurStrate);
+    });
   }
-  
+}
