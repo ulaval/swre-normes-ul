@@ -1,4 +1,4 @@
-﻿Version 2.3.1
+﻿Version 2.3.2
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des normes Web de l'Université Laval.
 
@@ -9,4 +9,8 @@ Il n’est pas recommandé de modifier les fichiers sources. Si des ajustements 
 
 Changement :
 
-1. Ajout de la photo du Palasis-Prince
+2.3.2 
+  * Utilisation de la hauteur spécifiée dans le fichier css pour l'animation de la strate de recherche
+
+2.3.1 
+  * Ajout de la photo du Palasis-Prince
