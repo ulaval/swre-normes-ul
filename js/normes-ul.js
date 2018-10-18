@@ -85,7 +85,7 @@ function toggleRecherche(){
   jQuery('.normes-ul-entete-ul .icon-recherche').toggle();
   jQuery('.normes-ul-entete-ul .icon-close').toggle();
   
-  var hauteurStrate = jQuery( '#section-recherche' ).css( "height" ).replace('px', '');
+  var hauteurStrate = jQuery('#section-recherche').css("height").replace('px', '');
   
   // Animation jQuery au lieu de CSS parce qu'animer la hauteur, c'est compliqué (cascade) et faire un déplacement aussi, à cause des z-index.
   // On part l'animation à une hauteur de 14px, ce qui correspond à "l'overlap" entre l'entête et le menu. C'est cet "overlap" qui empêche d'utiliser slideToggle parce que ça créé un "flash" blanc.
@@ -94,12 +94,11 @@ function toggleRecherche(){
     jQuery('#section-recherche').show();
     jQuery('#section-recherche').animate({height: hauteurStrate}, 100);
     jQuery('#section-recherche input').focus();
-    } 
-  else {
+  } else {
     jQuery('#section-recherche').animate({height: 14}, 100, 'swing', function() {
     jQuery('#section-recherche').hide()
     jQuery('#section-recherche').height(hauteurStrate);
-    });
+      });
+    }
   }
-}
   
