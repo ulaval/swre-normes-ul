@@ -1,0 +1,19 @@
+{
+  "name": "@ulaval/aidebrio",
+  "private": true,
+  "description": "Thème WordPress du site d'aide de Brio. Explication des devDependencies moins évidentes: load-grunt-tasks = charge en une ligne les dépendances de ce fichier, standard = linter Javascript, stylelint-config-standard = charge des configurations conventionnées, stylelint-order = permet d'automatiser le classement en ordre alphabétique des propriétés CSS.",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-standard": "^3.1.0",
+    "grunt-stylelint": "^0.10.0",
+    "load-grunt-tasks": "^3.5.2",
+    "standard": "^11.0.1",
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.0"
+  }
+}
