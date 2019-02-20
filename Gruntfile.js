@@ -16,7 +16,7 @@ module.exports = function (grunt) {
           unixNewlines: true,
         },
         files: {
-          'style.css': 'css/sass/assemblage.scss',
+          'css/normes-ul.css': 'css/sass/assemblage.scss',
         },
       },
     },

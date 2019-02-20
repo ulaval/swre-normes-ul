@@ -1,15 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+
 .normes-ul-entete {
   .rouge-et-or {
     height: 5px;
   }
+
   .rouge {
     width: 80%;
   }
+
   .or {
     float: left;
   }
 }
+
 @media (min-width: $lg) {
   .normes-ul-entete {
     .rouge-et-or {

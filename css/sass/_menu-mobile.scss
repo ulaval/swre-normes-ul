@@ -1,269 +1,311 @@
-//Allo ami intégrateur. Si tu trouves ce code lourd, tu as raison. Sache par contre que j'ai travaillé fort pour le réduire à la V2 et que je suis convaincu avoir fait le maximum sans tout refaire. Nicolas
+//Allo ami intégrateur. Si tu trouves ce code lourd, tu as raison. Sache par contre que j'ai travaillé fort pour le réduire à la V2 et que je suis convaincu avoir fait le maximum sans tout refaire. Nicolas Pelletier
 @mixin font-smoothing {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 // Gestion des couleurs dans le menu mobile
 @mixin nav-mobile($couleurBackground, $couleurTexte, $couleurSeparateurs, $couleurBackgroundBas, $couleurTexteBas, $couleurBoutonRetour ) {
-	color: $couleurTexte;
-	li {
-		background: $couleurBackground;
-	} 
-	a {
-		border-color: $couleurSeparateurs;
-		color: $couleurTexte !important;
-	}
-	.general,
-	.langue {
-		background: $couleurBackgroundBas !important;
-		a {
-			color: $couleurTexteBas !important;
-		}
-	}
-	ul ul li:last-child {
-		&:after {
-	    	background: $couleurBackground;
-		}
-		a {
-			border-color: $couleurSeparateurs;
-		}
-	}
-	.nav-mobile-content .go-back a {
-	    background: $couleurBoutonRetour;
-	}
-	.has-children>a::before, 
-	.has-children>a::after, 
-	.go-back a::before, 
-	.go-back a::after {
-	    background: $couleurTexte;
-	}
+  color: $couleurTexte;
+
+  li {
+    background: $couleurBackground;
+  }
+
+  a {
+    border-color: $couleurSeparateurs;
+    color: $couleurTexte !important;
+  }
+
+  .general,
+  .langue {
+    background: $couleurBackgroundBas !important;
+
+    a {
+      color: $couleurTexteBas !important;
+    }
+  }
+
+  ul ul li:last-child {
+    &::after {
+      background: $couleurBackground;
+    }
+
+    a {
+      border-color: $couleurSeparateurs;
+    }
+  }
+
+  .nav-mobile-content .go-back a {
+    background: $couleurBoutonRetour;
+  }
+
+  .has-children > a::before,
+  .has-children > a::after,
+  .go-back a::before,
+  .go-back a::after {
+    background: $couleurTexte;
+  }
 }
 // Thèmes
 // Paramètres du mixin $couleurBackground, $couleurTexte, $couleurSeparateurs, $couleurBackgroundBas, $couleurTexteBas, $couleurBoutonRetour
 .nav-mobile.blanc {
-	@include nav-mobile(#fff, #000, #a3a2a1, #2f2f30, #fff, #dad9d8);
-}
-.nav-mobile.charcoal{
-	@include nav-mobile(#3e3e3e, #fff, #848484, #2e2e2f, #fff, #2e2e30);
-}
-.normes-ul-nav-mobile-wrapper {
-	display: block;
-}
-#nav-toggle { 
-	cursor: pointer;
-	padding: 18px 5px 5px 13px;
-	&.dropdown-is-active {
-		span {
-			background-color: transparent;
-		}
-		span:before,
-		span:after {
-			top: 0;
-		}
-		span:before {
-			transform: rotate(45deg);
-		}
-		span:after {
-			transform: rotate(-45deg);
-		}
-	}
-	//hamburger animé
-	span,
-	span:before,
-	span:after {
-		background: #8d8b8c;
-		border-radius: 1px;
-		content: '';
-		cursor: pointer;
-		display: block;
-		height: 3px;
-		position: absolute;
-		transition: all 500ms ease-in-out;
-		width: 20px;
-	}
-	span:before {
-		top: -7px;
-	}
-	span:after {
-		bottom: -7px;
-	}
-}
-.normes-ul-nav-mobile-wrapper {
-	position: relative;
-	*,
-	*::after,
-	*::before {
-		box-sizing: border-box;
-	}
-	a {
-		border-top-width: 1px;
-		border-style: solid;
-		display: block;
-		font: 400 15px 'Source Sans Pro', sans-serif;
-		height: 46px;
-		line-height: 46px;
-		margin: 0 15px; //changer les valeurs du déplacement si cette valeur change 
-		overflow: hidden;
-		text-decoration: none;
-		text-overflow: ellipsis;
-		transition: opacity .3s, transform .3s;
-		z-index: 4;
-		white-space: nowrap;
-	}
-	img {
-		max-width: 100%;
-	}
-	input {
-		font: 300 15px 'Source Sans Pro', sans-serif;
-	}
-	.nav-mobile {
-		background-color: transparent;
-		left: 0;
-		position: absolute;
-		transform: translateY(-100%);
-		transition: transform 0.5s ease-out 0.1s, background-color 0.1s ease-out 0s, visibility 0s ease-out 0.6s; //De ouvert à fermé. Le filtre disparait rapidement, on remonte le menu puis on le cache.
-		visibility: hidden;
-		width: 100%;
-		z-index: 2;
-		&.dropdown-is-active { //Classe qui toggle en JQuery au clic sur le burger.
-			background-color: rgba(0, 0, 0, 0.6);
-			transform: translateY(0);
-			transition: transform 0.5s ease-out 0s, background-color 0.5s ease-out 0.5s, visibility 0s ease-out 0s; //De fermé à ouvert. On affiche le menu, on le fait descendre puis on fait apparaitre le filtre.
-			visibility: visible;
-			z-index: 3;
-		}
-	}
-	ul {
-		left: 0;
-		overflow-x: hidden;
-		overflow-y: auto;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		transition: opacity .3s, transform .3s;
-		&.is-hidden {
-			transform: translateX(100%) translateX(30px); //le 2e déplacement correspond aux marges gauche et droite du lien 
-		}
-		&.move-out > li > a,
-		&.move-out .langue,
-		&.move-out .general {
-			opacity: 0;
-			transform: translateX(-100%) translateX(-30px); //le 2e déplacement correspond aux marges gauche et droite du lien 
-		}
-		& > li:last-of-type.general {
-			padding-bottom: 25px;
-		}
-		ul {
-			height: 100%; //pour éviter que les ul de 2e niv aient des scrolls
-			li:last-child a {
-				border-bottom-width: 1px;
-				border-bottom-style: solid;
-			}
-			li:last-child:after {
-			    content: "";
-			    display: block;
-			    height: 50px;
-			    width: 100%;
-			}
-		}
-	}
-	.dernier-item-principal { //Ajouté en JQuery parce que tout est dans le même ul. Idéalement, à revoir, mais obligerait à tout refaire.
-    	&:after {
-			content: "";
-			display: block;
-			height: 50px;
-			width: 100%;
-		}
-		& > a {
-			border-bottom-style: solid;
-			border-bottom-width: 1px;
-		}
-		& + .general { //s'il n'y a pas de sélecteur de langue
-			padding-top: 25px;
-		}
-	}
-	.langue {
-		transition: opacity .3s, transform .3s;
-	}
-	.switch-langue {
-		background: none;
-		border: 1px solid #a7a7a7;
-		color: #a7a7a7 !important;
-		display: inline-block;
-		font: 300 15px 'Source Sans Pro', sans-serif;
-		height: 40px;
-		line-height: 35px;
-		margin-bottom: 15px;
-		margin-left: 15px;
-		margin-top: 25px;
-		padding: 1px 9px 17px 8px;
-		text-decoration: none;
-		text-align: center;
-		vertical-align: top;
-		width: 40px;
-	}
-	.general {
-		border: none;
-		transition: opacity .3s, transform .3s;
-		a {
-			border: none !important;
-			font-size: 13px;
-			height: 35px !important;
-			line-height: 35px;
-		}
-	}
-	.has-children > a,
-	.go-back a {
-		position: relative;
-		//flèche
-		&::before,
-		&::after {
-			background: #000;
-			content: '';
-			display: inline-block;
-			height: 2px;
-			margin-top: -1px;
-			position: absolute;
-			top: 50%;
-			width: 8px;
-			backface-visibility: hidden;
-		}
-		&::before {
-			transform: rotate(45deg);
-		}
-		&::after {
-			transform: rotate(-45deg);
-		}
-	}
-	.go-back a {
-		border-top: none;
-		padding-left: 30px;
-		&::before,
-		&::after {
-			left: 13px;
-			transform-origin: 1px 50%;
-		}
-	}
-	.has-children {
-		& > a {
-			padding-right: 40px;
-			&::before,
-			&::after {
-				right: 13px;
-				transform-origin: 7px 50%;
-			}
-		}
-		.current > a { //ajoutée en JQuery sur les pages parentes quand on navigue dans les 2 et 3e niveaux
-			border-top-color: #dad9d8;
-			font-size: 18px;
-			font-weight: bold;
-		}
-	}
+  @include nav-mobile(#fff, #000, #a3a2a1, #2f2f30, #fff, #dad9d8);
 }
 
-@media only screen and (min-width : 993px) {
-	.normes-ul-nav-mobile-wrapper,
-	.nav-mobile-trigger {
-		display: none !important;
-	}
+.nav-mobile.charcoal {
+  @include nav-mobile(#3e3e3e, #fff, #848484, #2e2e2f, #fff, #2e2e30);
+}
+
+#nav-toggle {
+  cursor: pointer;
+  padding: 18px 5px 5px 13px;
+
+  &.dropdown-is-active {
+    span {
+      background-color: transparent;
+    }
+
+    span::before,
+    span::after {
+      top: 0;
+    }
+
+    span::before {
+      transform: rotate(45deg);
+    }
+
+    span::after {
+      transform: rotate(-45deg);
+    }
+  }
+  //hamburger animé
+  span,
+  span::before,
+  span::after {
+    background: #8d8b8c;
+    border-radius: 1px;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 3px;
+    position: absolute;
+    transition: all 500ms ease-in-out;
+    width: 20px;
+  }
+
+  span::before {
+    top: -7px;
+  }
+
+  span::after {
+    bottom: -7px;
+  }
+}
+
+.normes-ul-nav-mobile-wrapper {
+  display: block;
+  position: relative;
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  a {
+    border-style: solid;
+    border-top-width: 1px;
+    display: block;
+    font: 400 15px 'Source Sans Pro', sans-serif;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 15px; //changer les valeurs du déplacement si cette valeur change
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s, transform 0.3s;
+    white-space: nowrap;
+    z-index: 4;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  input {
+    font: 300 15px 'Source Sans Pro', sans-serif;
+  }
+
+  .nav-mobile {
+    background-color: transparent;
+    left: 0;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out 0.1s, background-color 0.1s ease-out 0s, visibility 0s ease-out 0.6s; //De ouvert à fermé. Le filtre disparait rapidement, on remonte le menu puis on le cache.
+    visibility: hidden;
+    width: 100%;
+    z-index: 2;
+
+    &.dropdown-is-active { //Classe qui toggle en JQuery au clic sur le burger.
+      background-color: rgba(0, 0, 0, 0.6);
+      transform: translateY(0);
+      transition: transform 0.5s ease-out 0s, background-color 0.5s ease-out 0.5s, visibility 0s ease-out 0s; //De fermé à ouvert. On affiche le menu, on le fait descendre puis on fait apparaitre le filtre.
+      visibility: visible;
+      z-index: 3;
+    }
+  }
+
+  ul {
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    width: 100%;
+
+    &.is-hidden {
+      transform: translateX(100%) translateX(30px); //le 2e déplacement correspond aux marges gauche et droite du lien
+    }
+
+    &.move-out > li > a,
+    &.move-out .langue,
+    &.move-out .general {
+      opacity: 0;
+      transform: translateX(-100%) translateX(-30px); //le 2e déplacement correspond aux marges gauche et droite du lien
+    }
+
+    & > li:last-of-type.general {
+      padding-bottom: 25px;
+    }
+
+    ul {
+      height: 100%; //pour éviter que les ul de 2e niv aient des scrolls
+      li:last-child a {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+      }
+
+      li:last-child::after {
+        content: "";
+        display: block;
+        height: 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  .dernier-item-principal { //Ajouté en JQuery parce que tout est dans le même ul. Idéalement, à revoir, mais obligerait à tout refaire.
+    &::after {
+      content: "";
+      display: block;
+      height: 50px;
+      width: 100%;
+    }
+
+    & > a {
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+
+    & + .general { //s'il n'y a pas de sélecteur de langue
+      padding-top: 25px;
+    }
+  }
+
+  .langue {
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .switch-langue {
+    background: none;
+    border: 1px solid #a7a7a7;
+    color: #a7a7a7 !important;
+    display: inline-block;
+    font: 300 15px 'Source Sans Pro', sans-serif;
+    height: 40px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-top: 25px;
+    padding: 1px 9px 17px 8px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 40px;
+  }
+
+  .general {
+    border: none;
+    transition: opacity 0.3s, transform 0.3s;
+
+    a {
+      border: none !important;
+      font-size: 13px;
+      height: 35px !important;
+      line-height: 35px;
+    }
+  }
+
+  .has-children > a,
+  .go-back a {
+    position: relative;
+    //flèche
+    &::before,
+    &::after {
+      backface-visibility: hidden;
+      background: #000;
+      content: '';
+      display: inline-block;
+      height: 2px;
+      margin-top: -1px;
+      position: absolute;
+      top: 50%;
+      width: 8px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .go-back a {
+    border-top: none;
+    padding-left: 30px;
+
+    &::before,
+    &::after {
+      left: 13px;
+      transform-origin: 1px 50%;
+    }
+  }
+
+  .has-children {
+    & > a {
+      padding-right: 40px;
+
+      &::before,
+      &::after {
+        right: 13px;
+        transform-origin: 7px 50%;
+      }
+    }
+
+    .current > a { //ajoutée en JQuery sur les pages parentes quand on navigue dans les 2 et 3e niveaux
+      border-top-color: #dad9d8;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .normes-ul-nav-mobile-wrapper,
+  .nav-mobile-trigger {
+    display: none !important;
+  }
 }
