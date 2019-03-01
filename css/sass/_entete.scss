@@ -1,23 +1,42 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+ @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
 
 .normes-ul-entete {
-  .rouge-et-or {
-    height: 5px;
-  }
+  background: #fff;
 
   .rouge {
+    height: 5px;
     width: 80%;
   }
 
   .or {
+    height: 5px;
     float: left;
   }
+
+  .logo-ul {
+    left: 35px;
+    position: absolute; //Parce que la navigation est centrée dans la page
+    top: 13px;
+
+    img {
+      height: auto;
+      width: 100px;
+    }
+  }
+
+  //Navigation
+  //padding-left: 135, + 10?
 }
 
 @media (min-width: $lg) {
   .normes-ul-entete {
-    .rouge-et-or {
+    .rouge,
+    .or {
       height: 7px;
+    }
+
+    .logo-ul img {
+      width: 150px;
     }
   }
 }
