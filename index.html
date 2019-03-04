@@ -9,12 +9,12 @@
 	</head>
 	<body>
 		<header class="normes-ul-entete">
-			<div class="rouge"></div>
-			<div class="or"></div>
+			<div class="rouge" role="presentation"></div>
+			<div class="or" role="presentation"></div>
 			<a href="http://www.ulaval.ca" class="logo-ul">
 				<img src="img/logo-ul.svg" alt="Logo de l'Université Laval.">
 			</a>
-			<button>
+			<button class="declencheur-menu" aria-label="Menu">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 					<g>
 						<g id="menu">
@@ -26,30 +26,55 @@
 					</g>
 				</svg>
 			</button>
-			<div class="entete-contenu">
-				<div class="or">
-					<a href="http://www.ulaval.ca" class="logo-ul">
-						<object type="image/svg+xml" data="https://ressourcesweb.ulaval.ca/wp-content/themes/minuscule/normes-ul/img/logo-ul.svg" width="144" height="60" class="logo-complet">
-				        Logo Université Laval
-				        </object>
-				        <object type="image/svg+xml" data="https://ressourcesweb.ulaval.ca/wp-content/themes/minuscule/normes-ul/img/logo-ul-mobile.svg" width="41" height="52" class="logo-mobile">
-				        Logo Université Laval
-				        </object>
-					</a>
+			<div class="normes-ul-nav-mobile-wrapper">
+				<nav class="nav-mobile charcoal">
+					<ul class="nav-mobile-content">
+							<li>
+								<a href="/404">Futurs étudiants</a>
+							</li>
+							<li>
+								<a href="/404">Étudiants actuels</a>
+							</li>
+							<li>
+								<a href="/404">Études</a>
+							</li>
+							<li>
+								<a href="/404">Faculté</a>
+							</li>
+							<li>
+								<a href="/404">Recherche et création</a>
+							</li>
+							<li>
+								<a href="/404">Notre université</a>
+							</li>
+						</ul>
+				</nav>
+				<nav class="nav-generale">
+					<ul>
+						<li><a href="/404">monPortail</a></li>
+						<li><a href="https://www.ulaval.ca/nouvelles/" target="_blank">Nouvelles</a></li>
+						<li><a href="/404">Nous joindre</a></li>
+					</ul>
+				</nav>
+				<ul class="langues">
+					<li><a href="/404">fr</a></li>
+					<li><a href="/404">en</a></li>
+					<li><a href="/404">es</a></li>
+				</ul>
+				<div class="donner">
+					<a href="/404">Nous joindre</a>
 				</div>
+			</div>
+
+			<div class="entete-contenu">
+
 				<div class="rouge">
 					<div class="titres">
 													<a href="/404" class="surtitre" target="_blank">Facult&eacute; d'am&eacute;nagement, d'architecture, d'art et de design</a>
 							<a href="/404" class="titre">&Eacute;cole sup&eacute;rieure d'am&eacute;nagement du territoire et de d&eacute;veloppement r&eacute;gional</a>
 												</div>
 					<div class="navigation">
-						<nav class="navigation-generale">
-							<ul>
-                                <li><a href="https://www.ulaval.ca/nouvelles/" target="_blank">ULaval nouvelles</a></li>
-								<li><a href="/404">&Agrave; propos</a></li>
-								<li><a class="current" href="/404">Nous joindre</a></li>
-							</ul>
-						</nav>
+
 						<div class="utilitaires">
 							<a href="" class="recherche"><span class="icon-recherche"></span><span class="icon-close"></span></a>
 														<a href="#0" class="nav-mobile-trigger" id="nav-toggle"><span></span></a>
@@ -66,81 +91,7 @@
 				</button>
 			</form>
 		</div>
-		<div class="normes-ul-nav-mobile-wrapper">
-			<nav class="nav-mobile charcoal">
-					<ul class="nav-mobile-content">
-							<li class="has-children">
-								<a href="/404">Futurs étudiants</a>
-								<ul class="is-hidden">
-									<li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="/404">Futurs étudiants</a></li><li class="has-children">
-										<a href="/404">Lorem ipsum</a>
-										<ul class="is-hidden">
-											<li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="/404">Lorem ipsum</a></li><li>
-												<a href="/404">Lorem ipsum</a>
-											</li>
-											<li>
-												<a href="/404">Duis scelerisque</a>
-											</li>
-											<li>
-												<a href="/404">Suspendisse</a>
-											</li>
-											<li>
-												<a href="/404">Lorem ipsum</a>
-											</li>
-											<li>
-												<a href="/404">Duis scelerisque</a>
-											</li>
-											<li>
-												<a href="/404">Suspendisse</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="/404">Duis scelerisque</a>
-									</li>
-									<li>
-										<a href="/404">Suspendisse</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="/404">Étudiants actuels</a>
-							</li>
-							<li>
-								<a href="/404">Études</a>
-							</li>
-							<li class="current">
-								<a href="/404">État actif</a>
-							</li>
-							<li class="has-children">
-								<a href="/404">Recherche</a>
-								<ul class="is-hidden">
-									<li class="go-back"><a href="#0">Retour</a></li><li class="current"><a href="/404">Recherche</a></li><li>
-										<a href="/404">Lorem ipsum</a>
-									</li>
-									<li>
-										<a href="/404">Duis scelerisque</a>
-									</li>
-									<li>
-										<a href="/404">Suspendisse</a>
-									</li>
-									<li>
-										<a href="/404">Lorem ipsum</a>
-									</li>
-									<li>
-										<a href="/404">Duis scelerisque</a>
-									</li>
-									<li>
-										<a href="/404">Suspendisse</a>
-									</li>
-								</ul>
-							</li>
-							<li class="dernier-item-principal">
-								<a href="/404">Faculté</a>
-							</li><li class="general"><a href="https://www.ulaval.ca/nouvelles/" target="_blank">ULaval nouvelles</a></li><li class="general"><a href="/404">À propos</a></li><li class="general"><a class="current" href="/404">Nous joindre</a></li>
-						</ul>
-			</nav> <!-- .nav-mobile -->
-		</div> <!-- .normes-ul-nav-mobile-wrapper -->
+
 				<nav class="normes-ul-navigation-principale pleine-largeur noir-sousmenu-gris menu-centre">
 			<div>
 				<ul>
