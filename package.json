@@ -1,7 +1,7 @@
 {
-  "name": "@ulaval/aidebrio",
+  "name": "@ulaval/normes",
   "private": true,
-  "description": "Thème WordPress du site d'aide de Brio. Explication des devDependencies moins évidentes: load-grunt-tasks = charge en une ligne les dépendances de ce fichier, standard = linter Javascript, stylelint-config-standard = charge des configurations conventionnées, stylelint-order = permet d'automatiser le classement en ordre alphabétique des propriétés CSS.",
+  "description": "Normes d'entête et de pied de page web de l'Université Laval. Explication des devDependencies moins évidentes: load-grunt-tasks = charge en une ligne les dépendances de ce fichier, standard = linter Javascript, stylelint-config-standard = charge des configurations conventionnées, stylelint-order = permet d'automatiser le classement en ordre alphabétique des propriétés CSS.",
   "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-contrib-copy": "*",
