@@ -1,6 +1,7 @@
-$largeur-maximum-site : 1200px;
-$mapping-fonts : "fonts/";
+$largeur-maximum-site: 1200px;
+$mapping-fonts: "fonts/";
 $goutiere: 30px; //Marges entre les bloc de contenu, aussi utilisé comme "unité" ailleurs
+$demi-goutiere: $goutiere/2;
 $marge-texte: 20px; //Généralement la marge du bas
 
 // Points de rupture pour media queries
@@ -28,7 +29,7 @@ $xl: 1200px;
 // Extra large devices (large desktops, 1200px and up)
 //@media (min-width: $xl) { ... }
 
-/* Couleurs */
+// Couleurs
 $ul-rouge-ul: #e30513;
 $ul-jaune-ul: #ffc103;
 $ul-bleu-ul: #09f;

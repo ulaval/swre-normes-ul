@@ -1,16 +1,71 @@
- @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
 
 .normes-ul-entete {
   background: #fff;
+  //display: flex;
+  font-family: 'Source Sans Pro', sans-serif;
+  //flex-wrap: wrap;
+
+  &.entete-ulaval {
+    .declencheur-menu {
+      &.ouvert {
+        background: #ed1c24;
+      }
+    }
+
+    .nav-principale {
+      &.nav-ulaval {
+        background: #ed1c24;
+      }
+    }
+
+    .nav-generale {
+      background: #000;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .langues {
+      background: #000;
+
+      a {
+        color: #fff;
+
+        &.active {
+          background: #fff;
+          color: #000;
+        }
+      }
+
+      li {
+        border-right-color: #fff;
+      }
+    }
+
+    .donner {
+      background: #000;
+
+      a {
+        background: #fff;
+        color: #000;
+      }
+    }
+  }
 
   .rouge {
+    background: $ul-rouge-ul;
+    float: left;
     height: 5px;
     width: 80%;
   }
 
   .or {
-    height: 5px;
+    background: $ul-jaune-ul;
     float: left;
+    height: 5px;
+    width: 20%;
   }
 
   .logo-ul {
@@ -22,24 +77,150 @@
       height: auto;
       width: 100px;
     }
+  }
 
-    .declencheur-menu {
-      background: #000;
-      display: flex;
-      height: 55px;
-      width: 50px;
+  .declencheur-menu {
+    background: #000;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    float: right;
+    height: 55px;
+    width: 50px;
 
-      svg {
-        fill: #fff;
-        height: auto;
-        margin: auto;
-        width: 20px;
+    &.ouvert {
+      .ouvrir-menu {
+        display: none;
+      }
+
+      .fermer-menu {
+        display: flex;
+      }
+    }
+
+    svg {
+      fill: #fff;
+      height: auto;
+      margin: auto;
+      width: 20px;
+    }
+
+    .fermer-menu {
+      display: none;
+    }
+  }
+
+  .nav-principale {
+    background: #000;
+
+    ul {
+      list-style-type: none;
+      padding: $goutiere $demi-goutiere;
+    }
+
+    li {
+      border-bottom: 1px solid #fff;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    a {
+      color: #fff;
+      font-weight: 600;
+      padding: $demi-goutiere 5px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
 
-  //Navigation
-  //padding-left: 135, + 10?
+  .nav-generale {
+    font-size: 1.4rem;
+    padding: $demi-goutiere 5px;
+    width: 100%;
+
+    a {
+      padding: $demi-goutiere;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .langues {
+    font-size: 2rem;
+
+    li {
+      border-right-style: solid;
+      border-right-width: 1px;
+      padding: 0 5px;
+    }
+
+    a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 5px $demi-goutiere;
+
+      &:hover {
+        background: $ul-gris-pale-02;
+      }
+    }
+  }
+
+  .donner {
+    padding: $demi-goutiere;
+
+    a {
+      padding: 5px $demi-goutiere;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        background: $ul-gris-pale-02;
+      }
+    }
+  }
+
+  .chercher {
+    background: #fff;
+    padding: 40px $demi-goutiere;
+
+    button {
+      cursor: pointer;
+      margin-left: -16px; //Le bouton est par dessus le champ
+      position: relative;
+    }
+  }
+
+  .chercher-champ {
+    border-bottom: 1px solid #000;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-right: 21px; //La loupe embarque par dessus le champ. Elle mesure 16px de large et on ajoute 5px;
+  }
+
+  .chercher-etiquette {
+    font-size: 2rem;
+    margin-bottom: -40px; //Le label est sous le champ pour donner un effet de placeholder, tout en restant accessible. On le fait disparaitre en Javascript quand le focus tombe dans le champ.
+    position: relative;
+  }
+
+  input[type="radio"] + label {
+    font-size: 1.4rem;
+    padding: 5px 10px;
+  }
+
+  input[type="radio"]:checked + label {
+    background: #000;
+    color: #fff;
+  }
 }
 
 @media (min-width: $lg) {
@@ -51,6 +232,10 @@
 
     .logo-ul img {
       width: 150px;
+    }
+
+    .nav-principale {
+      padding: 0 145px; //145 = 135 (largeur du logo de l'UL) + 10
     }
   }
 }

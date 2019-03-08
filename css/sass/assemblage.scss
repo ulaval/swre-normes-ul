@@ -2,8 +2,9 @@
 // Assemblage des fichiers SASS
 ////////////////////////////////
 
-@import "normalize.css";
+@import "normalize";
 @import "variables";
+@import "utilitaires";
 @import "entete";
 //@import "pied-page";
 //@import "menu-principal";

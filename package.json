@@ -5,11 +5,12 @@
   "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-contrib-copy": "*",
-    "grunt-contrib-sass": "*",
     "grunt-contrib-watch": "*",
+    "grunt-sass": "^3.0.2",
     "grunt-standard": "^3.1.0",
     "grunt-stylelint": "^0.10.0",
     "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.11.0",
     "standard": "^11.0.1",
     "stylelint": "^9.2.1",
     "stylelint-config-standard": "^18.2.0",

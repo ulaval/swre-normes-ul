@@ -1,6 +1,7 @@
 // Voir README.md
 'use strict';
 module.exports = function (grunt) {
+  const sass = require('node-sass');
   require('load-grunt-tasks')(grunt); // Utilise le module load-grunt-tasks pour charger automatiquement les tâches à partir du fichier package.json
   grunt.initConfig({
     standard: { // Javascript (https://standardjs.com/)
@@ -10,14 +11,14 @@ module.exports = function (grunt) {
       all: ['css/sass/**/*.scss'] // On scan tout le dossier sass et ses sous dossiers. Les configurations viennent des modules stylelint-config-standard et stylelint-order. Utiliser le CLI pour réparer les erreurs automatiquements.
     },
     sass: {
-      main: {
-        options: {
-          style: 'compressed',
-          unixNewlines: true,
-        },
-        files: {
-          'css/normes-ul.css': 'css/sass/assemblage.scss',
-        },
+      options: {
+          implementation: sass,
+          sourceMap: true
+      },
+      dist: {
+          files: {
+            'css/normes-ul.css': 'css/sass/assemblage.scss'
+          },
       },
     },
     watch: {
@@ -29,13 +30,13 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['css/sass/**/*.scss'],
-        tasks: ['sass:main'],
+        tasks: ['sass'],
       },
     },
   })
   grunt.registerTask('build', [ // Construit un environnement de test local
     'ci',
-    'sass:main',
+    'sass',
   ]);
   grunt.registerTask('serve', [ // Démarre les services nécessaires au développement
     'build',

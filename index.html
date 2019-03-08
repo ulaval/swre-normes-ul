@@ -8,14 +8,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<header class="normes-ul-entete">
+		<header class="normes-ul-entete entete-ulaval">
 			<div class="rouge" role="presentation"></div>
 			<div class="or" role="presentation"></div>
 			<a href="http://www.ulaval.ca" class="logo-ul">
 				<img src="img/logo-ul.svg" alt="Logo de l'Université Laval.">
 			</a>
-			<button class="declencheur-menu" aria-label="Menu">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+			<button class="declencheur-menu" aria-label="Menu" type="button">
+				<svg class="ouvrir-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 					<g>
 						<g id="menu">
 							<path d="M13.28,17.42H37a1,1,0,0,0,0-2H13.28a1,1,0,0,0,0,2Z"/>
@@ -25,29 +25,37 @@
 						</g>
 					</g>
 				</svg>
+				<svg class="fermer-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+					<g>
+						<g id="fermer">
+							<path d="M26.57,24.92l9.81-9.81a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0l-9.81,9.81L15.34,13.7a1,1,0,0,0-1.41,1.41l9.81,9.81-9.81,9.81a1,1,0,0,0,1.41,1.42l9.81-9.81L35,36.15a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill:#231f20"/>
+							<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+						</g>
+					</g>
+				</svg>
 			</button>
-			<div class="normes-ul-nav-mobile-wrapper">
-				<nav class="nav-mobile charcoal">
-					<ul class="nav-mobile-content">
-							<li>
-								<a href="/404">Futurs étudiants</a>
-							</li>
-							<li>
-								<a href="/404">Étudiants actuels</a>
-							</li>
-							<li>
-								<a href="/404">Études</a>
-							</li>
-							<li>
-								<a href="/404">Faculté</a>
-							</li>
-							<li>
-								<a href="/404">Recherche et création</a>
-							</li>
-							<li>
-								<a href="/404">Notre université</a>
-							</li>
-						</ul>
+			<div class="navigations">
+				<nav class="nav-principale">
+					<ul>
+						<li>
+							<a href="/404">Futurs étudiants</a>
+						</li>
+						<li>
+							<a href="/404">Étudiants actuels</a>
+						</li>
+						<li>
+							<a href="/404">Études</a>
+						</li>
+						<li>
+							<a href="/404">Faculté</a>
+						</li>
+						<li>
+							<a href="/404">Recherche et création</a>
+						</li>
+						<li>
+							<a href="/404">Notre université</a>
+						</li>
+					</ul>
 				</nav>
 				<nav class="nav-generale">
 					<ul>
@@ -65,108 +73,25 @@
 					<a href="/404">Nous joindre</a>
 				</div>
 			</div>
-
-			<div class="entete-contenu">
-
-				<div class="rouge">
-					<div class="titres">
-													<a href="/404" class="surtitre" target="_blank">Facult&eacute; d'am&eacute;nagement, d'architecture, d'art et de design</a>
-							<a href="/404" class="titre">&Eacute;cole sup&eacute;rieure d'am&eacute;nagement du territoire et de d&eacute;veloppement r&eacute;gional</a>
-												</div>
-					<div class="navigation">
-
-						<div class="utilitaires">
-							<a href="" class="recherche"><span class="icon-recherche"></span><span class="icon-close"></span></a>
-														<a href="#0" class="nav-mobile-trigger" id="nav-toggle"><span></span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<div id="section-recherche" class="normes-ul-recherche" role="search">
-			<form method="get" action="/404">
-				<input type="search" placeholder="Chercher dans le site de la Facult&eacute;" name="champ-recherche" value="" class="champ-recherche" />
-				<button type="submit" class="btn-recherche" value="">
-					<span class="icon-recherche"></span>
+			<form class="chercher" method="get" action="/404" role="search">
+				<label class="chercher-etiquette" for="chercher-champ"></label>
+				<input type="search" id="chercher-champ" class="chercher-champ" name="chercher-champ" value="Chercher dans le site" aria-label="Chercher dans le site">
+				<button type="submit" aria-label="Chercher">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+						<g id="loupe">
+							<path d="M41.53,39.88,31.08,29.38a13,13,0,1,0-1.41,1.41l10.44,10.5a1,1,0,1,0,1.42-1.41Zm-20.22-8A10.83,10.83,0,1,1,32.14,21.08,10.84,10.84,0,0,1,21.31,31.91Z" style="fill:#231f20"/>
+							<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+						</g>
+						</svg>
 				</button>
 			</form>
-		</div>
-
-				<nav class="normes-ul-navigation-principale pleine-largeur noir-sousmenu-gris menu-centre">
-			<div>
-				<ul>
-					<li>
-						<a href="/404">Futurs &eacute;tudiants</a>
-						<ul>
-							<li>
-								<a href="/404">Lorem ipsum</a>
-								<ul>
-									<li>
-										<a href="/404">Lorem ipsum</a>
-									</li>
-									<li>
-										<a href="/404">Duis scelerisque</a>
-									</li>
-									<li>
-										<a href="/404">Suspendisse</a>
-									</li>
-									<li>
-										<a href="/404">Lorem ipsum</a>
-									</li>
-									<li>
-										<a href="/404">Duis scelerisque</a>
-									</li>
-									<li>
-										<a href="/404">Suspendisse</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="/404">Duis scelerisque</a>
-							</li>
-							<li>
-								<a href="/404">Suspendisse</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="/404">&Eacute;tudiants actuels</a>
-					</li>
-					<li>
-						<a href="/404">&Eacute;tudes</a>
-					</li>
-					<li class="current">
-						<a href="/404">État actif</a>
-					</li>
-					<li>
-						<a href="/404">Recherche</a>
-						<ul>
-							<li>
-								<a href="/404">Lorem ipsum</a>
-							</li>
-							<li>
-								<a href="/404">Duis scelerisque</a>
-							</li>
-							<li>
-								<a href="/404">Suspendisse</a>
-							</li>
-							<li>
-								<a href="/404">Lorem ipsum</a>
-							</li>
-							<li>
-								<a href="/404">Duis scelerisque</a>
-							</li>
-							<li>
-								<a href="/404">Suspendisse</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="/404">Facult&eacute;</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+			<input class="visually-hidden" type="radio" id="chercher-ulaval" name="type-recherche" value="ulaval" checked>
+			<label for="chercher-ulaval">Tout ulaval.ca</label>
+			<input class="visually-hidden" type="radio" id="chercher-bottin" name="type-recherche" value="bottin">
+			<label for="chercher-bottin">Bottin UL</label>
+			<input class="visually-hidden" type="radio" id="chercher-services" name="type-recherche" value="services">
+			<label for="chercher-services">Services UL</label>
+		</header>
 		<main>
 			<div style="display: flex; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; height: 600px;">
 				<p style="text-align: center; margin: auto;"><strong>Contenu</strong></p>
