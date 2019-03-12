@@ -315,10 +315,11 @@ template {
 
 .normes-ul-entete {
   background: #fff;
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem; }
   .normes-ul-entete.entete-ulaval .declencheur-menu.ouvert {
     background: #ed1c24; }
-  .normes-ul-entete.entete-ulaval .nav-principale.nav-ulaval {
+  .normes-ul-entete.entete-ulaval .nav-principale {
     background: #ed1c24; }
   .normes-ul-entete.entete-ulaval .nav-generale {
     background: #000; }
@@ -326,30 +327,32 @@ template {
       color: #fff; }
   .normes-ul-entete.entete-ulaval .langues {
     background: #000; }
-    .normes-ul-entete.entete-ulaval .langues a {
-      color: #fff; }
-      .normes-ul-entete.entete-ulaval .langues a.active {
-        background: #fff;
-        color: #000; }
     .normes-ul-entete.entete-ulaval .langues li {
       border-right-color: #fff; }
+      .normes-ul-entete.entete-ulaval .langues li .active {
+        background: #fff;
+        color: #000; }
+    .normes-ul-entete.entete-ulaval .langues a {
+      color: #fff; }
   .normes-ul-entete.entete-ulaval .donner {
     background: #000; }
     .normes-ul-entete.entete-ulaval .donner a {
       background: #fff;
       color: #000; }
+  .normes-ul-entete .entete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; }
   .normes-ul-entete .rouge {
     background: #e30513;
-    float: left;
     height: 5px;
     width: 80%; }
   .normes-ul-entete .or {
     background: #ffc103;
-    float: left;
     height: 5px;
     width: 20%; }
   .normes-ul-entete .logo-ul {
-    left: 35px;
+    left: 15px;
     position: absolute;
     top: 13px; }
     .normes-ul-entete .logo-ul img {
@@ -378,43 +381,61 @@ template {
     background: #000; }
     .normes-ul-entete .nav-principale ul {
       list-style-type: none;
-      padding: 30px 15px; }
+      margin: 0;
+      padding: 15px; }
     .normes-ul-entete .nav-principale li {
       border-bottom: 1px solid #fff; }
       .normes-ul-entete .nav-principale li:last-of-type {
         border-bottom: none; }
     .normes-ul-entete .nav-principale a {
       color: #fff;
+      display: block;
       font-weight: 600;
       padding: 15px 5px;
       text-decoration: none; }
       .normes-ul-entete .nav-principale a:hover {
         text-decoration: underline; }
   .normes-ul-entete .nav-generale {
-    font-size: 1.4rem;
-    padding: 15px 5px;
+    font-size: 0.875rem;
     width: 100%; }
+    .normes-ul-entete .nav-generale ul {
+      margin: 0;
+      padding: 0; }
+    .normes-ul-entete .nav-generale li {
+      display: inline-block; }
     .normes-ul-entete .nav-generale a {
-      padding: 15px;
+      display: inline-block;
+      padding: 25px 15px;
       text-decoration: none; }
       .normes-ul-entete .nav-generale a:hover {
         text-decoration: underline; }
   .normes-ul-entete .langues {
-    font-size: 2rem; }
+    display: flex;
+    font-size: 1.25rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 10px; }
     .normes-ul-entete .langues li {
       border-right-style: solid;
       border-right-width: 1px;
+      display: inline-block;
       padding: 0 5px; }
+      .normes-ul-entete .langues li:last-of-type {
+        border: none; }
+      .normes-ul-entete .langues li a,
+      .normes-ul-entete .langues li span {
+        display: inline-block;
+        padding: 3px 13px; }
     .normes-ul-entete .langues a {
-      font-size: 1.5rem;
-      font-weight: 600;
-      padding: 5px 15px; }
+      text-decoration: none; }
       .normes-ul-entete .langues a:hover {
-        background: #ededed; }
+        text-decoration: underline; }
   .normes-ul-entete .donner {
     padding: 15px; }
     .normes-ul-entete .donner a {
-      padding: 5px 15px;
+      font-weight: 600;
+      font-size: 0.938em;
+      padding: 5px 20px;
       text-decoration: none;
       text-transform: uppercase; }
       .normes-ul-entete .donner a:hover {
@@ -433,23 +454,31 @@ template {
     border-top: none;
     padding-right: 21px; }
   .normes-ul-entete .chercher-etiquette {
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin-bottom: -40px;
     position: relative; }
   .normes-ul-entete input[type="radio"] + label {
-    font-size: 1.4rem;
+    cursor: pointer;
+    font-size: 0.875rem;
     padding: 5px 10px; }
   .normes-ul-entete input[type="radio"]:checked + label {
     background: #000;
     color: #fff; }
 
 @media (min-width: 992px) {
-  .normes-ul-entete .rouge,
-  .normes-ul-entete .or {
-    height: 7px; }
-  .normes-ul-entete .logo-ul img {
-    width: 150px; }
-  .normes-ul-entete .nav-principale {
-    padding: 0 145px; } }
+  /* .normes-ul-entete {
+    .rouge,
+    .or {
+      height: 7px;
+    }
+
+    .logo-ul img {
+      width: 150px;
+    }
+
+    .nav-principale {
+      padding: 0 145px; //145 = 135 (largeur du logo de l'UL) + 10
+    }
+  } */ }
 
 /*# sourceMappingURL=normes-ul.css.map */

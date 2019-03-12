@@ -2,10 +2,10 @@
 
 .normes-ul-entete {
   background: #fff;
-  //display: flex;
   font-family: 'Source Sans Pro', sans-serif;
-  //flex-wrap: wrap;
+  font-size: 1rem;
 
+  //Couleurs
   &.entete-ulaval {
     .declencheur-menu {
       &.ouvert {
@@ -14,9 +14,7 @@
     }
 
     .nav-principale {
-      &.nav-ulaval {
-        background: #ed1c24;
-      }
+      background: #ed1c24;
     }
 
     .nav-generale {
@@ -30,17 +28,17 @@
     .langues {
       background: #000;
 
-      a {
-        color: #fff;
+      li {
+        border-right-color: #fff;
 
-        &.active {
+        .active {
           background: #fff;
           color: #000;
         }
       }
 
-      li {
-        border-right-color: #fff;
+      a {
+        color: #fff;
       }
     }
 
@@ -53,23 +51,28 @@
       }
     }
   }
+  //Fin - Couleurs
+
+  .entete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
 
   .rouge {
     background: $ul-rouge-ul;
-    float: left;
     height: 5px;
     width: 80%;
   }
 
   .or {
     background: $ul-jaune-ul;
-    float: left;
     height: 5px;
     width: 20%;
   }
 
   .logo-ul {
-    left: 35px;
+    left: 15px;
     position: absolute; //Parce que la navigation est centrée dans la page
     top: 13px;
 
@@ -115,7 +118,8 @@
 
     ul {
       list-style-type: none;
-      padding: $goutiere $demi-goutiere;
+      margin: 0;
+      padding: $demi-goutiere;
     }
 
     li {
@@ -128,6 +132,7 @@
 
     a {
       color: #fff;
+      display: block;
       font-weight: 600;
       padding: $demi-goutiere 5px;
       text-decoration: none;
@@ -139,12 +144,21 @@
   }
 
   .nav-generale {
-    font-size: 1.4rem;
-    padding: $demi-goutiere 5px;
+    font-size: 0.875rem; //14px si la racine est 16px
     width: 100%;
 
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+    }
+
     a {
-      padding: $demi-goutiere;
+      display: inline-block;
+      padding: 25px $demi-goutiere;
       text-decoration: none;
 
       &:hover {
@@ -154,21 +168,34 @@
   }
 
   .langues {
-    font-size: 2rem;
+    display: flex;
+    font-size: 1.25rem; //20px si la racine est 16px
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 10px;
 
     li {
       border-right-style: solid;
       border-right-width: 1px;
+      display: inline-block;
       padding: 0 5px;
+
+      &:last-of-type {
+        border: none;
+      }
+
+      a,
+      span {
+        display: inline-block;
+        padding: 3px 13px;
+      }
     }
 
     a {
-      font-size: 1.5rem;
-      font-weight: 600;
-      padding: 5px $demi-goutiere;
+      text-decoration: none;
 
       &:hover {
-        background: $ul-gris-pale-02;
+        text-decoration: underline;
       }
     }
   }
@@ -177,7 +204,9 @@
     padding: $demi-goutiere;
 
     a {
-      padding: 5px $demi-goutiere;
+      font-weight: 600;
+      font-size: 0.938em; //15px si la racine est 16px
+      padding: 5px 20px;;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -207,13 +236,14 @@
   }
 
   .chercher-etiquette {
-    font-size: 2rem;
+    font-size: 1.25rem; //20px si la racine est 16px
     margin-bottom: -40px; //Le label est sous le champ pour donner un effet de placeholder, tout en restant accessible. On le fait disparaitre en Javascript quand le focus tombe dans le champ.
     position: relative;
   }
 
   input[type="radio"] + label {
-    font-size: 1.4rem;
+    cursor: pointer;
+    font-size: 0.875rem; //14px si la racine est 16px
     padding: 5px 10px;
   }
 
@@ -224,7 +254,7 @@
 }
 
 @media (min-width: $lg) {
-  .normes-ul-entete {
+  /* .normes-ul-entete {
     .rouge,
     .or {
       height: 7px;
@@ -237,5 +267,5 @@
     .nav-principale {
       padding: 0 145px; //145 = 135 (largeur du logo de l'UL) + 10
     }
-  }
+  } */
 }

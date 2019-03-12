@@ -9,31 +9,33 @@
 	</head>
 	<body>
 		<header class="normes-ul-entete entete-ulaval">
-			<div class="rouge" role="presentation"></div>
-			<div class="or" role="presentation"></div>
-			<a href="http://www.ulaval.ca" class="logo-ul">
-				<img src="img/logo-ul.svg" alt="Logo de l'Université Laval.">
-			</a>
-			<button class="declencheur-menu" aria-label="Menu" type="button">
-				<svg class="ouvrir-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-					<g>
-						<g id="menu">
-							<path d="M13.28,17.42H37a1,1,0,0,0,0-2H13.28a1,1,0,0,0,0,2Z"/>
-							<path d="M37,23.92H13.28a1,1,0,0,0,0,2H37a1,1,0,0,0,0-2Z"/>
-							<path d="M37,32.42H13.28a1,1,0,0,0,0,2H37a1,1,0,0,0,0-2Z"/>
-							<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+			<div class="entete">
+				<div class="rouge" role="presentation"></div>
+				<div class="or" role="presentation"></div>
+				<a href="http://www.ulaval.ca" class="logo-ul">
+					<img src="img/logo-ul.svg" alt="Logo de l'Université Laval.">
+				</a>
+				<button class="declencheur-menu" aria-label="Menu" type="button">
+					<svg class="ouvrir-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+						<g>
+							<g id="menu">
+								<path d="M13.28,17.42H37a1,1,0,0,0,0-2H13.28a1,1,0,0,0,0,2Z"/>
+								<path d="M37,23.92H13.28a1,1,0,0,0,0,2H37a1,1,0,0,0,0-2Z"/>
+								<path d="M37,32.42H13.28a1,1,0,0,0,0,2H37a1,1,0,0,0,0-2Z"/>
+								<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+							</g>
 						</g>
-					</g>
-				</svg>
-				<svg class="fermer-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-					<g>
-						<g id="fermer">
-							<path d="M26.57,24.92l9.81-9.81a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0l-9.81,9.81L15.34,13.7a1,1,0,0,0-1.41,1.41l9.81,9.81-9.81,9.81a1,1,0,0,0,1.41,1.42l9.81-9.81L35,36.15a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill:#231f20"/>
-							<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+					</svg>
+					<svg class="fermer-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+						<g>
+							<g id="fermer">
+								<path d="M26.57,24.92l9.81-9.81a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0l-9.81,9.81L15.34,13.7a1,1,0,0,0-1.41,1.41l9.81,9.81-9.81,9.81a1,1,0,0,0,1.41,1.42l9.81-9.81L35,36.15a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill:#231f20"/>
+								<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+							</g>
 						</g>
-					</g>
-				</svg>
-			</button>
+					</svg>
+				</button>
+			</div>
 			<div class="navigations">
 				<nav class="nav-principale">
 					<ul>
@@ -65,32 +67,32 @@
 					</ul>
 				</nav>
 				<ul class="langues">
-					<li><a href="/404">fr</a></li>
-					<li><a href="/404">en</a></li>
-					<li><a href="/404">es</a></li>
+					<li><span class="active">fr</span></li>
+					<li><a href="/404" arialabel="English" lang="en" hreflang="en">en</a></li>
+					<li><a href="/404" arialabel="Espanol" lang="es" hreflang="es">es</a></li>
 				</ul>
 				<div class="donner">
-					<a href="/404">Nous joindre</a>
+					<a href="/404">Donner</a>
 				</div>
+				<form class="chercher" method="get" action="/404" role="search">
+					<label class="chercher-etiquette" for="chercher-champ"></label>
+					<input type="search" id="chercher-champ" class="chercher-champ" name="chercher-champ" value="Chercher dans le site" aria-label="Chercher dans le site">
+					<button type="submit" aria-label="Chercher">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+							<g id="loupe">
+								<path d="M41.53,39.88,31.08,29.38a13,13,0,1,0-1.41,1.41l10.44,10.5a1,1,0,1,0,1.42-1.41Zm-20.22-8A10.83,10.83,0,1,1,32.14,21.08,10.84,10.84,0,0,1,21.31,31.91Z" style="fill:#231f20"/>
+								<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+							</g>
+							</svg>
+					</button>
+					<input class="visually-hidden" type="radio" id="chercher-ulaval" name="type-recherche" value="ulaval" checked>
+					<label for="chercher-ulaval">Tout ulaval.ca</label>
+					<input class="visually-hidden" type="radio" id="chercher-bottin" name="type-recherche" value="bottin">
+					<label for="chercher-bottin">Bottin UL</label>
+					<input class="visually-hidden" type="radio" id="chercher-services" name="type-recherche" value="services">
+					<label for="chercher-services">Services UL</label>
+				</form>
 			</div>
-			<form class="chercher" method="get" action="/404" role="search">
-				<label class="chercher-etiquette" for="chercher-champ"></label>
-				<input type="search" id="chercher-champ" class="chercher-champ" name="chercher-champ" value="Chercher dans le site" aria-label="Chercher dans le site">
-				<button type="submit" aria-label="Chercher">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-						<g id="loupe">
-							<path d="M41.53,39.88,31.08,29.38a13,13,0,1,0-1.41,1.41l10.44,10.5a1,1,0,1,0,1.42-1.41Zm-20.22-8A10.83,10.83,0,1,1,32.14,21.08,10.84,10.84,0,0,1,21.31,31.91Z" style="fill:#231f20"/>
-							<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
-						</g>
-						</svg>
-				</button>
-			</form>
-			<input class="visually-hidden" type="radio" id="chercher-ulaval" name="type-recherche" value="ulaval" checked>
-			<label for="chercher-ulaval">Tout ulaval.ca</label>
-			<input class="visually-hidden" type="radio" id="chercher-bottin" name="type-recherche" value="bottin">
-			<label for="chercher-bottin">Bottin UL</label>
-			<input class="visually-hidden" type="radio" id="chercher-services" name="type-recherche" value="services">
-			<label for="chercher-services">Services UL</label>
 		</header>
 		<main>
 			<div style="display: flex; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; height: 600px;">
