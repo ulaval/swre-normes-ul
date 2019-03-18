@@ -105,7 +105,7 @@
       fill: #fff;
       height: auto;
       margin: auto;
-      width: 20px;
+      width: 40px;
     }
 
     .fermer-menu {
@@ -113,8 +113,14 @@
     }
   }
 
+  .navigations {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .nav-principale {
     background: #000;
+    width: 100%;
 
     ul {
       list-style-type: none;
@@ -172,7 +178,7 @@
     font-size: 1.25rem; //20px si la racine est 16px
     list-style-type: none;
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 10px 25px 10px;
 
     li {
       border-right-style: solid;
@@ -201,12 +207,15 @@
   }
 
   .donner {
-    padding: $demi-goutiere;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 5px $demi-goutiere 25px 10px;
 
     a {
-      font-weight: 600;
       font-size: 0.938em; //15px si la racine est 16px
-      padding: 5px 20px;;
+      font-weight: 600;
+      padding: 5px 20px;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -219,11 +228,19 @@
   .chercher {
     background: #fff;
     padding: 40px $demi-goutiere;
+    position: relative;
+    width: 100%;
 
     button {
+      background: transparent;
+      border: none;
       cursor: pointer;
-      margin-left: -16px; //Le bouton est par dessus le champ
-      position: relative;
+      height: 40px;
+      position: absolute;
+      //Le bouton est par dessus le champ
+      right: 8px;
+      top: 34px;
+      width: 40px;
     }
   }
 
@@ -232,24 +249,41 @@
     border-left: none;
     border-right: none;
     border-top: none;
-    padding-right: 21px; //La loupe embarque par dessus le champ. Elle mesure 16px de large et on ajoute 5px;
-  }
-
-  .chercher-etiquette {
     font-size: 1.25rem; //20px si la racine est 16px
-    margin-bottom: -40px; //Le label est sous le champ pour donner un effet de placeholder, tout en restant accessible. On le fait disparaitre en Javascript quand le focus tombe dans le champ.
-    position: relative;
+    padding-right: 17px; //Dégagement parce que la loupe embarque par dessus le champ
+    width: 100%;
+
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+      background: url("../img/icones/fermer.svg");
+    }
   }
 
-  input[type="radio"] + label {
-    cursor: pointer;
-    font-size: 0.875rem; //14px si la racine est 16px
-    padding: 5px 10px;
+  .chercher-etiquette { //Le label est sous le champ pour donner un effet de placeholder, tout en restant accessible. On le fait disparaitre en Javascript quand le focus tombe dans le champ.
+    font-size: 1.25rem; //20px si la racine est 16px
+    left: 15px;
+    position: absolute;
+    top: 40px;
   }
 
-  input[type="radio"]:checked + label {
-    background: #000;
-    color: #fff;
+  input[type="radio"] {
+    &:checked + label {
+      background: #000;
+      color: #fff;
+    }
+
+    &:focus + label {
+      outline: red auto 3px;
+    }
+
+    & + label {
+      cursor: pointer;
+      font-size: 0.875rem; //14px si la racine est 16px
+      padding: 5px 10px;
+    }
   }
 }
 

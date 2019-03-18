@@ -16,27 +16,26 @@
 					<img src="img/logo-ul.svg" alt="Logo de l'Université Laval.">
 				</a>
 				<button class="declencheur-menu" aria-label="Menu" type="button">
-					<svg class="ouvrir-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+					<svg id="menu" class="ouvrir-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 						<g>
-							<g id="menu">
-								<path d="M13.28,17.42H37a1,1,0,0,0,0-2H13.28a1,1,0,0,0,0,2Z"/>
-								<path d="M37,23.92H13.28a1,1,0,0,0,0,2H37a1,1,0,0,0,0-2Z"/>
-								<path d="M37,32.42H13.28a1,1,0,0,0,0,2H37a1,1,0,0,0,0-2Z"/>
-								<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
-							</g>
+							<path d="M14.64,18.95h20.72c0.83,0,1.5-0.67,1.5-1.5s-0.67-1.5-1.5-1.5H14.64c-0.83,0-1.5,0.67-1.5,1.5S13.81,18.95,14.64,18.95z"/>
+							<path d="M35.36,23.45H14.64c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5h20.72c0.83,0,1.5-0.67,1.5-1.5S36.19,23.45,35.36,23.45z"/>
+							<path d="M35.36,30.95H14.64c-0.83,0-1.5,0.67-1.5,1.5c0,0.83,0.67,1.5,1.5,1.5h20.72c0.83,0,1.5-0.67,1.5-1.5
+								C36.86,31.63,36.19,30.95,35.36,30.95z"/>
 						</g>
+						<path style="fill:none" d="M45-0.05H5c-2.76,0-5,2.24-5,5v40c0,2.76,2.24,5,5,5h40c2.76,0,5-2.24,5-5v-40C50,2.19,47.76-0.05,45-0.05z
+							M25,45.29C13.78,45.3,4.68,36.21,4.67,24.98C4.66,13.76,13.76,4.66,24.98,4.65c11.22-0.01,20.32,9.08,20.33,20.3
+							c0.01,11.22-9.08,20.33-20.3,20.34C25.01,45.29,25,45.29,25,45.29z"/>
 					</svg>
-					<svg class="fermer-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+					<svg id="fermer" class="fermer-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
 						<g>
-							<g id="fermer">
-								<path d="M26.57,24.92l9.81-9.81a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0l-9.81,9.81L15.34,13.7a1,1,0,0,0-1.41,1.41l9.81,9.81-9.81,9.81a1,1,0,0,0,1.41,1.42l9.81-9.81L35,36.15a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z" style="fill:#231f20"/>
+								<path d="M26.57,24.92l9.81-9.81a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0l-9.81,9.81L15.34,13.7a1,1,0,0,0-1.41,1.41l9.81,9.81-9.81,9.81a1,1,0,0,0,1.41,1.42l9.81-9.81L35,36.15a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z"/>
 								<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
-							</g>
 						</g>
 					</svg>
 				</button>
 			</div>
-			<div class="navigations">
+			<div class="navigations" style="display: none;">
 				<nav class="nav-principale">
 					<ul>
 						<li>
@@ -75,18 +74,27 @@
 					<a href="/404">Donner</a>
 				</div>
 				<form class="chercher" method="get" action="/404" role="search">
-					<label class="chercher-etiquette" for="chercher-champ"></label>
-					<input type="search" id="chercher-champ" class="chercher-champ" name="chercher-champ" value="Chercher dans le site" aria-label="Chercher dans le site">
+					<label class="chercher-etiquette" for="chercher-champ">Chercher dans le site</label>
+					<input type="search" id="chercher-champ" class="chercher-champ" name="chercher-champ" value="" aria-label="Chercher dans le site">
 					<button type="submit" aria-label="Chercher">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-							<g id="loupe">
-								<path d="M41.53,39.88,31.08,29.38a13,13,0,1,0-1.41,1.41l10.44,10.5a1,1,0,1,0,1.42-1.41Zm-20.22-8A10.83,10.83,0,1,1,32.14,21.08,10.84,10.84,0,0,1,21.31,31.91Z" style="fill:#231f20"/>
-								<path d="M45,0H5A5,5,0,0,0,0,5V45a5,5,0,0,0,5,5H45a5,5,0,0,0,5-5V5A5,5,0,0,0,45,0ZM25,45.33A20.32,20.32,0,1,1,45.31,25,20.33,20.33,0,0,1,25,45.33Z" style="fill:none"/>
+						<svg id="loupe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+							<style type="text/css">
+								.st0{fill:none;}
+							</style>
+							<g>
+								<path class="st0" d="M45,0H5C2.24,0,0,2.24,0,5v40c0,2.76,2.24,5,5,5h40c2.76,0,5-2.24,5-5V5C50,2.24,47.76,0,45,0z M25,45.33
+									C13.78,45.34,4.68,36.24,4.67,25.02S13.76,4.7,24.98,4.69S45.3,13.78,45.31,25C45.31,36.22,36.22,45.32,25,45.33z"/>
 							</g>
-							</svg>
+							<path d="M11.67,36.74c0,0.43,0.17,0.84,0.48,1.14c0.3,0.3,0.71,0.47,1.14,0.47c0,0,0,0,0,0c0.43,0,0.84-0.17,1.14-0.48l7.19-7.23
+								c3.92,2.88,9.29,2.71,13.04-0.51c4.4-3.77,4.91-10.42,1.14-14.82c-3.77-4.4-10.42-4.91-14.82-1.14c-4.19,3.59-4.85,9.8-1.64,14.18
+								l-7.2,7.23C11.84,35.9,11.67,36.31,11.67,36.74z M20.6,22.27c0-3.96,3.21-7.17,7.15-7.17s7.15,3.21,7.15,7.15s-3.21,7.15-7.15,7.15
+								h-0.56C23.51,29.11,20.6,26.03,20.6,22.27z"/>
+							<path class="st0" d="M25.01,45.32C13.79,45.33,4.69,36.23,4.68,25.01S13.77,4.69,24.99,4.68s20.32,9.09,20.33,20.31
+								C45.32,36.21,36.23,45.31,25.01,45.32z"/>
+						</svg>
 					</button>
 					<input class="visually-hidden" type="radio" id="chercher-ulaval" name="type-recherche" value="ulaval" checked>
-					<label for="chercher-ulaval">Tout ulaval.ca</label>
+					<label for="chercher-ulaval" id="test-nic">Tout ulaval.ca</label>
 					<input class="visually-hidden" type="radio" id="chercher-bottin" name="type-recherche" value="bottin">
 					<label for="chercher-bottin">Bottin UL</label>
 					<input class="visually-hidden" type="radio" id="chercher-services" name="type-recherche" value="services">

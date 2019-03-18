@@ -374,11 +374,15 @@ template {
       fill: #fff;
       height: auto;
       margin: auto;
-      width: 20px; }
+      width: 40px; }
     .normes-ul-entete .declencheur-menu .fermer-menu {
       display: none; }
+  .normes-ul-entete .navigations {
+    display: flex;
+    flex-wrap: wrap; }
   .normes-ul-entete .nav-principale {
-    background: #000; }
+    background: #000;
+    width: 100%; }
     .normes-ul-entete .nav-principale ul {
       list-style-type: none;
       margin: 0;
@@ -414,7 +418,7 @@ template {
     font-size: 1.25rem;
     list-style-type: none;
     margin: 0;
-    padding: 5px 10px; }
+    padding: 5px 10px 25px 10px; }
     .normes-ul-entete .langues li {
       border-right-style: solid;
       border-right-width: 1px;
@@ -431,10 +435,13 @@ template {
       .normes-ul-entete .langues a:hover {
         text-decoration: underline; }
   .normes-ul-entete .donner {
-    padding: 15px; }
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding: 5px 15px 25px 10px; }
     .normes-ul-entete .donner a {
-      font-weight: 600;
       font-size: 0.938em;
+      font-weight: 600;
       padding: 5px 20px;
       text-decoration: none;
       text-transform: uppercase; }
@@ -442,28 +449,46 @@ template {
         background: #ededed; }
   .normes-ul-entete .chercher {
     background: #fff;
-    padding: 40px 15px; }
+    padding: 40px 15px;
+    position: relative;
+    width: 100%; }
     .normes-ul-entete .chercher button {
+      background: transparent;
+      border: none;
       cursor: pointer;
-      margin-left: -16px;
-      position: relative; }
+      height: 40px;
+      position: absolute;
+      right: 8px;
+      top: 34px;
+      width: 40px; }
   .normes-ul-entete .chercher-champ {
     border-bottom: 1px solid #000;
     border-left: none;
     border-right: none;
     border-top: none;
-    padding-right: 21px; }
+    font-size: 1.25rem;
+    padding-right: 17px;
+    width: 100%; }
+    .normes-ul-entete .chercher-champ::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+      background: url("../img/icones/fermer.svg"); }
   .normes-ul-entete .chercher-etiquette {
     font-size: 1.25rem;
-    margin-bottom: -40px;
-    position: relative; }
+    left: 15px;
+    position: absolute;
+    top: 40px; }
+  .normes-ul-entete input[type="radio"]:checked + label {
+    background: #000;
+    color: #fff; }
+  .normes-ul-entete input[type="radio"]:focus + label {
+    outline: red auto 3px; }
   .normes-ul-entete input[type="radio"] + label {
     cursor: pointer;
     font-size: 0.875rem;
     padding: 5px 10px; }
-  .normes-ul-entete input[type="radio"]:checked + label {
-    background: #000;
-    color: #fff; }
 
 @media (min-width: 992px) {
   /* .normes-ul-entete {
