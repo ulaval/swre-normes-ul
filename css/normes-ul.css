@@ -484,7 +484,7 @@ template {
     background: #000;
     color: #fff; }
   .normes-ul-entete input[type="radio"]:focus + label {
-    outline: red auto 3px; }
+    outline: #a6c7ff solid 2px; }
   .normes-ul-entete input[type="radio"] + label {
     cursor: pointer;
     font-size: 0.875rem;
