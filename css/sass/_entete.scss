@@ -48,6 +48,10 @@
       a {
         background: #fff;
         color: #000;
+
+        &:hover {
+          background: $ul-gris-pale-02;
+        }
       }
     }
   }
@@ -218,10 +222,6 @@
       padding: 5px 20px;
       text-decoration: none;
       text-transform: uppercase;
-
-      &:hover {
-        background: $ul-gris-pale-02;
-      }
     }
   }
 
@@ -255,10 +255,10 @@
 
     &::-webkit-search-cancel-button {
       -webkit-appearance: none;
+      background: url("../img/icones/fermer.svg");
       cursor: pointer;
       height: 30px;
       width: 30px;
-      background: url("../img/icones/fermer.svg");
     }
   }
 
@@ -273,34 +273,27 @@
     &:checked + label {
       background: #000;
       color: #fff;
+
+      &:hover {
+        background: #000;
+      }
     }
 
     // Pour des raison d'accessiblité et pour faciliter la navigation au clavier, on ajoute le outline sur le label parce que le bouton radio est caché
     &:focus + label {
-      outline: #a6c7ff solid 2px; //Valeur imitant Chrome 73 sur Windows 10
+      outline: #a6c7ff solid 2px; //Parce qu'il faut faire un choix: valeur imitant Chrome 73 sur Windows 10
     }
 
     & + label {
       cursor: pointer;
+      display: inline-block;
       font-size: 0.875rem; //14px si la racine est 16px
+      margin: $demi-goutiere 0 0 0;
       padding: 5px 10px;
+
+      &:hover {
+        background: $ul-gris-pale-02;
+      }
     }
   }
-}
-
-@media (min-width: $lg) {
-  /* .normes-ul-entete {
-    .rouge,
-    .or {
-      height: 7px;
-    }
-
-    .logo-ul img {
-      width: 150px;
-    }
-
-    .nav-principale {
-      padding: 0 145px; //145 = 135 (largeur du logo de l'UL) + 10
-    }
-  } */
 }
