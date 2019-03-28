@@ -2,6 +2,8 @@
 // Assemblage des fichiers SASS
 ////////////////////////////////
 
+// Le linter Stylelint est utilisé pour gérer le style des CSS. On utilise les règles stylelint-config-standard (https://github.com/stylelint/stylelint-config-standard) plus quelques règles maisons et les modules nécessaires. Voir .stylelintrc et package.json pour les configurations.
+
 @import "normalize";
 @import "variables";
 @import "utilitaires";

@@ -1,4 +1,5 @@
 /* global $, event */
+/* "JavaScript Standard Style" (https://standardjs.com) est utilisé pour gérer le style */
 $(document).ready(function ($) {
   $('.declencheur-menu').click(function () {
     $('.navigations').slideToggle()

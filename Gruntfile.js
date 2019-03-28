@@ -12,6 +12,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
+          outputStyle: 'compressed',
           implementation: sass,
           sourceMap: true
       },

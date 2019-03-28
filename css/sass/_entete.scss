@@ -1,61 +1,88 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
 
+@mixin couleurs-entete($couleur-declancheur-hover, $couleur-main-bg, $couleur-main-texte, $couleur-sec-bg, $couleur-sec-texte, $couleur-donner-bg, $couleur-donner-texte, $couleur-donner-hover) {
+  .declencheur-menu {
+    &.ouvert {
+      background: $couleur-main-bg;
+
+      &:hover {
+        background: $couleur-declancheur-hover;
+      }
+
+      svg {
+        fill: $couleur-main-texte;
+      }
+    }
+  }
+
+  .nav-principale {
+    background: $couleur-main-bg;
+
+    li {
+      border-bottom-color: $couleur-main-texte;
+    }
+
+    a {
+      color: $couleur-main-texte;
+    }
+  }
+
+  .nav-generale {
+    background: $couleur-sec-bg;
+
+    a {
+      color: $couleur-sec-texte;
+    }
+  }
+
+  .langues {
+    background: $couleur-sec-bg;
+
+    li {
+      border-right-color: $couleur-sec-texte;
+
+      .active {
+        background: $couleur-sec-texte;
+        color: $couleur-sec-bg;
+      }
+    }
+
+    a {
+      color: $couleur-sec-texte;
+    }
+  }
+
+  .donner {
+    background: $couleur-sec-bg;
+
+    a {
+      background: $couleur-donner-bg;
+      color: $couleur-donner-texte;
+
+      &:hover {
+        background: $couleur-donner-hover;
+      }
+    }
+  }
+}
+
+// Paramètres du mixin couleurs-entete: $couleur-declancheur-hover, $couleur-main-bg, $couleur-main-texte, $couleur-sec-bg, $couleur-sec-texte, $couleur-donner-bg, $couleur-donner-texte, $couleur-donner-hover
+.normes-ul-entete.entete-ulaval {
+  @include couleurs-entete($ul-gris-fonce-02, #ed1c24, #fff, #000, #fff, #fff, #000, $ul-gris-pale-02);
+}
+
+.normes-ul-entete.entete-pale {
+  @include couleurs-entete($ul-gris-moyen-02, $ul-gris-moyen-01, #000, #fff, #000, #ED1C24, #fff, $ul-gris-fonce-02);
+}
+
+.normes-ul-entete.entete-fonce {
+  @include couleurs-entete($ul-gris-fonce-02, #000, #fff, #fff, #000, #ED1C24, #fff, $ul-gris-fonce-02);
+}
+
 .normes-ul-entete {
   background: #fff;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
-
-  //Couleurs
-  &.entete-ulaval {
-    .declencheur-menu {
-      &.ouvert {
-        background: #ed1c24;
-      }
-    }
-
-    .nav-principale {
-      background: #ed1c24;
-    }
-
-    .nav-generale {
-      background: #000;
-
-      a {
-        color: #fff;
-      }
-    }
-
-    .langues {
-      background: #000;
-
-      li {
-        border-right-color: #fff;
-
-        .active {
-          background: #fff;
-          color: #000;
-        }
-      }
-
-      a {
-        color: #fff;
-      }
-    }
-
-    .donner {
-      background: #000;
-
-      a {
-        background: #fff;
-        color: #000;
-
-        &:hover {
-          background: $ul-gris-pale-02;
-        }
-      }
-    }
-  }
-  //Fin - Couleurs
 
   .entete {
     display: flex;
@@ -95,6 +122,10 @@
     height: 55px;
     width: 50px;
 
+    &:hover {
+      background: $ul-gris-fonce-02;
+    }
+
     &.ouvert {
       .ouvrir-menu {
         display: none;
@@ -133,7 +164,8 @@
     }
 
     li {
-      border-bottom: 1px solid #fff;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
 
       &:last-of-type {
         border-bottom: none;
@@ -141,7 +173,6 @@
     }
 
     a {
-      color: #fff;
       display: block;
       font-weight: 600;
       padding: $demi-goutiere 5px;
