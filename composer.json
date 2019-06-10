@@ -1,0 +1,9 @@
+{
+"name": "ulaval/normes_ul",
+"type": "ulaval-templates-assets",
+"description": "Normes UL",
+"license": "GPL-2.0+",
+"homepage": "https://bitbucket.org/ulavalbsw/normes-ul/",
+"minimum-stability": "dev",
+"require": { }
+}
