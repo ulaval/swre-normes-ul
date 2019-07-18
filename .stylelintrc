@@ -1,5 +1,5 @@
 {
-    "ignoreFiles": "css/sass/_normalize.scss",
+    "ignoreFiles": "src/sass/_normalize.scss",
     "extends": "stylelint-config-standard",
     "plugins": [
         "stylelint-scss",
