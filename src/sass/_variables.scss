@@ -30,6 +30,8 @@ $xl: 1200px;
 //@media (min-width: $xl) { ... }
 
 // Couleurs
+$ul-noir-ul: #000;
+$ul-blanc-ul: #fff;
 $ul-rouge-ul: #e30513;
 $ul-jaune-ul: #ffc103;
 $ul-bleu-ul: #09f;
@@ -40,3 +42,6 @@ $ul-gris-moyen-01: #dbdbdb;
 $ul-gris-moyen-02: #999;
 $ul-gris-fonce-01: #666;
 $ul-gris-fonce-02: #232323;
+
+// Nouvelles couleurs potentielles
+$ul-temp-gris-fonce-015: #2c2c2c;
