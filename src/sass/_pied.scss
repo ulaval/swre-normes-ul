@@ -1,0 +1,413 @@
+.ul-pied {
+  border-top: 1px solid $ul-noir-ul;
+  padding: 0 0.75rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .ul-infos {
+    border-bottom: 1px solid $ul-gris-moyen-01;
+    display: flex;
+    flex-direction: column;
+    padding: 2.813rem 0;
+
+    &--identite {
+      flex: 1 1 auto;
+
+      .unite {
+        align-items: center;
+        display: flex;
+        flex: 0 0 auto;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0 0 1.875rem;
+        justify-content: center;
+      }
+
+      .bureau {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.875rem;
+
+        &--icone {
+          align-items: center;
+          display: flex;
+          height: 3.125rem;
+          justify-content: center;
+          margin-bottom: 0.5rem;
+
+          svg {
+            height: 36px;
+            width: 25px;
+          }
+        }
+
+        &--contenu {
+          display: flex;
+          flex: 1 1 auto;
+          flex-direction: column;
+        }
+      }
+
+      .coordonnees {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .adresse {
+        font-size: 0.875rem;
+        margin: 0 0 0.25rem;
+        text-align: center;
+      }
+
+      .contact {
+        display: flex;
+        flex: 2 2 0;
+        flex-wrap: wrap;
+        font-size: 0.875rem;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin: 0 1.5rem 0.25rem 0;
+        }
+      }
+    }
+
+    &--social {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      a {
+        display: block;
+        margin-left: 0.25rem;
+        padding: 0.5rem;
+        transition: background-color 0.125s ease-out;
+
+        &:hover {
+          background-color: $ul-gris-pale-02;
+        }
+
+        &:focus {
+          background-color: $ul-gris-pale-02;
+          outline: none;
+        }
+      }
+
+      svg {
+        display: block;
+        height: 20px;
+        transition: fill 0.125s ease-out;
+        width: 20px;
+      }
+    }
+  }
+
+  .ul-utilitaires {
+    border-bottom: 1px solid $ul-gris-moyen-01;
+    display: flex;
+    flex-direction: column;
+    padding: 2.813rem 0;
+
+    &--nav {
+      display: flex;
+      flex: 1 1 60%;
+      flex-direction: column;
+      order: 2;
+      text-align: center;
+
+      ul {
+        flex: 1 1 100%;
+        line-height: 1.25;
+        list-style-type: none;
+        margin: 0 0 1.5rem;
+        padding: 0;
+      }
+
+      li {
+        font-size: 0.875rem;
+
+        &:first-child {
+          font-size: 0.938rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin: 0 -0.25rem;
+        padding: 0.125rem 0.25rem;
+
+        &:focus {
+          outline: 2px solid $ul-bleu-ul;
+          outline-offset: -2px;
+        }
+      }
+    }
+
+    &--urgence {
+      align-self: center;
+      flex: 1 1 20%;
+      order: 3;
+      text-align: center;
+
+      .action {
+        background-color: $ul-rouge-ul;
+        color: $ul-blanc-ul;
+        display: inline-block;
+        font-size: 0.938rem;
+        font-weight: 700;
+        padding: 0.5rem;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: #a81106;
+          text-decoration: none;
+        }
+
+        &:focus {
+          background-color: #a81106;
+          outline: none;
+          text-decoration: none;
+        }
+      }
+
+      p {
+        font-size: 0.875rem;
+        margin: 1rem 0 0;
+      }
+    }
+
+    &--actions {
+      display: flex;
+      flex: 0 1 20%;
+      flex-direction: column;
+      order: 1;
+
+      a {
+        border: 1px solid $ul-noir-ul;
+        flex: 1 1 100%;
+        margin-bottom: 1.875rem;
+        padding: 0.938rem 1rem;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $ul-gris-pale-02;
+        }
+
+        &:focus {
+          background-color: $ul-gris-pale-02;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .ul-copy {
+    color: $ul-gris-fonce-01;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    justify-content: center;
+    line-height: 1.4;
+    margin: 0;
+    padding: 1rem 0;
+
+    &--col {
+      margin-right: 1rem;
+
+      span,
+      a {
+        margin: 0 0.5rem;
+      }
+
+      a {
+        color: $ul-noir-ul;
+        display: inline-block;
+        margin: -0.125rem 0.25rem;
+        padding: 0.125rem 0.25rem;
+
+        &:focus {
+          outline: 2px solid $ul-bleu-ul;
+          outline-offset: -1px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 37.5em) {
+  .ul-pied {
+    .ul-utilitaires {
+      &--actions {
+        flex-direction: row;
+
+        a {
+          margin: 0 1rem 1.875rem;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 42em) {
+  .ul-pied {
+    padding: 0 1.25rem;
+
+    .ul-utilitaires {
+      &--nav {
+        flex-direction: row;
+
+        ul {
+          margin-bottom: 2.75rem;
+        }
+      }
+
+      &--actions {
+        a {
+          margin-bottom: 2.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .ul-pied {
+    .ul-infos {
+      align-items: flex-start;
+      flex-direction: row;
+
+      &--identite {
+        .unite {
+          height: 3.125rem;
+          justify-content: flex-start;
+        }
+
+        .bureau {
+          flex-direction: row;
+          margin-bottom: 0;
+
+          &--icone {
+            margin: 0 1.875rem 0 0;
+          }
+
+          &--contenu {
+            align-items: center;
+            flex-direction: row;
+          }
+
+          .unite {
+            margin: 0 3.125rem 0 0;
+          }
+        }
+
+        .coordonnees {
+          align-items: center;
+          flex-direction: row;
+        }
+
+        .adresse {
+          flex: 0 1 auto;
+          margin: 0 1.5rem 0 0;
+          text-align: left;
+        }
+
+        .contact {
+          flex: 0 1 auto;
+          justify-content: flex-start;
+
+          li {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+
+      &--social {
+        flex: 0 1 20%;
+        justify-content: flex-end;
+        margin: 0.5rem 0;
+      }
+    }
+
+    .ul-utilitaires {
+      flex-direction: row;
+
+      &--nav {
+        order: 1;
+        text-align: left;
+
+        ul {
+          margin: 0 1.875rem 0 0;
+        }
+      }
+
+      &--urgence {
+        align-self: flex-start;
+        margin-right: 1.875rem;
+        order: 2;
+        text-align: left;
+
+        &:first-child {
+          align-self: center;
+        }
+      }
+
+      &--actions {
+        flex-direction: column;
+        order: 3;
+
+        a {
+          flex: 0;
+          margin: 0 0 1.875rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .ul-copy {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .ul-pied {
+    .ul-infos {
+      &--identite {
+        .coordonnees {
+          align-items: center;
+          flex-direction: row;
+        }
+
+        .adresse {
+          margin: 0 1.5rem 0 0;
+        }
+      }
+    }
+  }
+}
