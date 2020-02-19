@@ -19,8 +19,8 @@ jQuery(document).ready(function(jQuery){
 	jQuery('.nav-mobile-content > li:last-of-type').after(jQuery('.navigation-generale li').clone().addClass("general"));
 
 	// Si nécessaire, ajout du lien pour le changement de langue
-	if(jQuery('.switch-langue').length > 0) {		
-		jQuery('.nav-mobile-content').append(jQuery('.switch-langue').clone());
+	if(jQuery('.switch-langue').length > 0) {
+		jQuery('.nav-mobile-content .general').first().before(jQuery('.switch-langue').clone());
 		jQuery('.nav-mobile-content .switch-langue').wrap('<li class="langue"></li>');
 	}
 
