@@ -24,7 +24,7 @@ jQuery(document).ready(function(jQuery){
 		//Si le menu général existe
 		if(jQuery('.nav-mobile-content .general').length > 0){
 			jQuery('.nav-mobile-content .general').first().before(jQuery('.switch-langue').clone());
-			Query('.nav-mobile-content .switch-langue').wrap('<li class="langue"></li>');
+			jQuery('.nav-mobile-content .switch-langue').wrap('<li class="langue"></li>');
 		//Si le menu general n'existe pas
 		}else {
 			jQuery('.nav-mobile-content').append(jQuery('.switch-langue').clone());
