@@ -16,7 +16,7 @@ jQuery(document).ready(function(jQuery){
 	jQuery('.nav-mobile-content > li:last-of-type').addClass('dernier-item-principal');
 
 	// Ajout du menu général
-	jQuery('.nav-mobile-content > li:last-of-type').after(jQuery('.navigation-generale li').clone().addClass("general"));
+	jQuery('.nav-mobile-content > li:last-of-type').after(jQuery('.navigation-generale>ul>li').clone().addClass("general"));
 
 	// Si nécessaire, ajout du lien pour le changement de langue
 	if(jQuery('.switch-langue').length > 0) {
