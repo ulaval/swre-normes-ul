@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="102.604px" height="129.771px" viewBox="0 0 102.604 129.771" enable-background="new 0 0 102.604 129.771"
-	 xml:space="preserve">
+	 xml:space="preserve" role="img" aria-labelledby="svg-title">
 <path d="M0,0v101.413c0,8.729,6.723,15.562,15.303,15.562h24.102c3.222,0,7.417,2.175,9.516,8.277l1.161,3.375
 	c0.287,0.697,0.691,1.144,1.155,1.144c0.456,0,0.868-0.444,1.154-1.144l1.162-3.375c2.099-6.104,6.287-8.277,9.509-8.277h24.102
 	c8.583,0,15.302-6.833,15.302-15.562V0H0z"/>
@@ -509,4 +509,5 @@
 		c-0.333-0.12-1.389-0.521-1.757-0.659c-0.079-0.029-0.146-0.039-0.174-0.039c-0.314,0.016-0.409,0.286-0.372,0.444
 		C91.14,103.701,91.993,106.923,92.365,108.402z"/>
 </g>
+<title id="svg-title">Université Laval - Retour à la page d'accueil</title>
 </svg>
