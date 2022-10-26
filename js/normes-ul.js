@@ -84,7 +84,7 @@ function toggleNav(){
   if (jQuery('.nav-mobile').hasClass('dropdown-is-active')) { // Si l'utilisateur a navigué passé le 1er niveau puis ferme le menu, s'il l'ouvre à nouveau, il revient au 1er au 1er niveau
       jQuery('.has-children ul').addClass('is-hidden');
       jQuery('.move-out').removeClass('move-out');
-      jQuery('.is-active').removeClass('is-active');
+      jQuery('.nav-mobile .is-active').removeClass('is-active');
   }
 }
 
